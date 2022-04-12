@@ -26,58 +26,42 @@ body {
   left: 200px;
   top: 400px;
   width: 600px;
-  
 }
 
-.section1-menus{
-    display: flex;
-    gap: 80px;
-    position: relative;
-    left: 200px;
-    top: 500px;
-    color: white;
-    width: 600px;
-    text-shadow: 1px 1px 1px black;
+.section1-menus {
+  display: flex;
+  gap: 80px;
+  position: relative;
+  left: 200px;
+  top: 500px;
+  color: white;
+  width: 600px;
+  text-shadow: 1px 1px 1px black;
 }
 
-.section1-menus h1{
-    font-size: 1.2rem;
+.section1-menus h1 {
+  font-size: 1.2rem;
 }
 
-.section1-menus a{
-    text-decoration: none;
-    font-size: 5rem;
-    width: 60px;
-    height: 80px;
-    color: #BA5536;
+.section1-menus a {
+  text-decoration: none;
+  font-size: 5rem;
+  width: 60px;
+  height: 80px;
+  color: #ba5536;
 }
 
-.compte1{
-    display: flex;
-    flex-flow: column;
-    gap: 15px;
+.compte1 {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
 }
 
-.liste1{
-    display: flex;
-    flex-flow: column;
-    gap: 15px;
+.liste1 {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .background2 {
   background-color: #46211a;
