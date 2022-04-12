@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.background1 {
+  background-image: url(/assets/images/asso-myron-uLBraHlT1Uw-unsplash.jpg);
+  height: 800px;
+  width: 100%;
+  background-size: cover;
+  background-position: 0 50%;
+}
+
+.background2 {
+  background-color: #46211a;
+  height: 300px;
+}
