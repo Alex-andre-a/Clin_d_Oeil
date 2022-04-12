@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Merienda";
 }
 
 body {
@@ -11,11 +12,72 @@ body {
 
 .background1 {
   background-image: url(/assets/images/asso-myron-uLBraHlT1Uw-unsplash.jpg);
-  height: 800px;
+  height: 900px;
   width: 100%;
   background-size: cover;
-  background-position: 0 50%;
+  background-position: 30%;
 }
+
+.titre1 {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px black;
+  position: relative;
+  left: 200px;
+  top: 400px;
+  width: 600px;
+  
+}
+
+.section1-menus{
+    display: flex;
+    gap: 80px;
+    position: relative;
+    left: 200px;
+    top: 500px;
+    color: white;
+    width: 600px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.section1-menus h1{
+    font-size: 1.2rem;
+}
+
+.section1-menus a{
+    text-decoration: none;
+    font-size: 5rem;
+    width: 60px;
+    height: 80px;
+    color: #BA5536;
+}
+
+.compte1{
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
+
+.liste1{
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .background2 {
   background-color: #46211a;
