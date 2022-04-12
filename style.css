@@ -12,7 +12,7 @@ body {
 
 .background1 {
   background-image: url(/assets/images/asso-myron-uLBraHlT1Uw-unsplash.jpg);
-  height: 900px;
+  height: 950px;
   width: 100%;
   background-size: cover;
   background-position: 30%;
@@ -45,10 +45,9 @@ body {
 
 .section1-menus a {
   text-decoration: none;
-  font-size: 5rem;
-  width: 60px;
-  height: 80px;
-  color: #ba5536;
+  width: 50px;
+  height: 50px;
+  background-image: url(/assets/icons/icons8-chevron-droit-50.png);
 }
 
 .compte1 {
