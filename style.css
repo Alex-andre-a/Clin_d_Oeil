@@ -10,6 +10,8 @@ body {
   width: 100%;
 }
 
+/* *********************** SECTION 1 ******************************  */
+
 .background1 {
   background-image: url(/assets/images/asso-myron-uLBraHlT1Uw-unsplash.jpg);
   height: 950px;
@@ -62,7 +64,42 @@ body {
   gap: 15px;
 }
 
+/* *********************** SECTION 2 ******************************  */
+
 .background2 {
   background-color: #46211a;
-  height: 300px;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
+.titre2 {
+  color: white;
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px black;
+  height: 350px;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.background2 img {
+  height: 80px;
+}
+
+.background2 p {
+  font-size: 1.2rem;
+}
+
+/* *********************** SECTION 3 ******************************  */
+
+/* .background3{
+  background-color:#693d3d;
+  height: 400px;
+} */
