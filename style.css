@@ -49,7 +49,7 @@ body {
   text-decoration: none;
   width: 50px;
   height: 50px;
-  background-image: url(/assets/icons/icons8-chevron-droit-50.png);
+  background-image: url(/assets/icons/icons8-chevron-droit-50\ marron.png);
 }
 
 .compte1 {
@@ -160,7 +160,7 @@ body {
   height: 20px;
   width: 80px;
   color: white;
-  background-color: black;
+  background-color: #a43820;
   text-decoration: none;
   font-weight: bold;
   padding: 5px 5px;
@@ -214,7 +214,7 @@ body {
   width: 25%;
   height: 100%;
   background-size: cover;
-  background-image: url(/assets/images/photos4/clement-remond-xVRw4WY2Rgs-unsplash.jpg);
+  background-image: url(/assets/images/section4/clement-remond-xVRw4WY2Rgs-unsplash.jpg);
   background-position: 0 35%;
 }
 
@@ -222,14 +222,15 @@ body {
   width: 25%;
   height: 100%;
   background-size: cover;
-  background-image: url(/assets/images/photos4/dan-asaki-wC_YNVgIRdA-unsplash.jpg);
+  background-image: url(/assets/images/section4/dan-asaki-wC_YNVgIRdA-unsplash.jpg);
+  background-position: 0 50%;
 }
 
 .photos4-3{
   width: 25%;
   height: 100%;
   background-size: cover;
-  background-image: url(/assets/images/photos4/diogo-fagundes-dbBKeN1s8GY-unsplash.jpg);
+  background-image: url(/assets/images/section4/diogo-fagundes-dbBKeN1s8GY-unsplash.jpg);
   background-position: 0 100%;
 }
 
@@ -237,12 +238,115 @@ body {
   width: 25%;
   height: 100%;
   background-size: cover;
-  background-image: url(/assets/images/photos4/les-elby-pe-eF3pFjYI-unsplash.jpg);
+  background-image: url(/assets/images/section4/les-elby-pe-eF3pFjYI-unsplash.jpg);
 }
 
 /* *********************** SECTION 5 ******************************  */
 
 .section5 {
   background-color: #693d3d81;
-  height: 600px;
+  height: 800px;
 }
+
+.content5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  height: 100%;
+  width: 100%;
+}
+
+.photos5{
+  background-image: url(/assets/images/section5/shot-by-cerqueira-cCkheI30Jd4-unsplash.jpg);
+  width: 600px;
+  height: 550px;
+  background-size: cover;
+}
+
+.texte5 {
+  width: 600px;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+
+.texte5 h1 {
+  font-size: 2rem;
+}
+
+.texte5 p {
+  letter-spacing: 1px;
+}
+
+.texte5-1{
+  display: flex;
+  flex-flow: row;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+.texte5-1 img{
+  width: 50px;
+}
+
+/* *********************** SECTION 6 ******************************  */
+
+.section6 {
+  background-color: #46211a;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.contact{
+  height: 400px;
+  color: white;
+}
+
+.contact h1{
+  font-size: 2rem;
+  margin: 20px 0;
+  text-shadow: 1px 1px 1px black;
+}
+
+.social{
+  text-align: center;
+  margin-top: 180px;
+}
+
+.social img{
+  height: 30px;
+}
+
+.content6 {
+  width: 450px;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+
+.content6 input, textarea{
+  height: 40px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.content6 input[type=submit] {
+  width: 25%;
+  background-color: #a43820;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.content6 input[type=submit]:hover {
+  background-color:#a438207d;
+} 
+
