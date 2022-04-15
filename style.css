@@ -20,6 +20,43 @@ body {
   background-position: 30%;
 }
 
+.menus-liste {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #46211a0e;
+  display: none;
+}
+
+.menus-liste a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-right: 80px;
+}
+
+.hamburger {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 30px;
+  padding-top: 10px;
+}
+
+.hamburger span {
+  display: flex;
+  flex-flow: column;
+  height: 8px;
+  width: 45px;
+  background-color: #a43820;
+  margin: 3px 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .titre1 {
   color: white;
   font-size: 2rem;
