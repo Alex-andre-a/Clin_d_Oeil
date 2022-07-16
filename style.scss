@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merienda";
+  }
+  
+  body {
+    width: 100%;
+  }
+
+  /* ============================== NAVBAR ============================== */
+
+  .menusListe {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #46211a0e;
+    display: none; /* **************HIDE************* */
+  }
+  
+  .menusListe a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 80px;
+  }
+  
+  .hamBurger {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 30px;
+    padding-top: 10px;
+  }
+  
+  .hamBurger span {
+    display: flex;
+    flex-flow: column;
+    height: 8px;
+    width: 45px;
+    background-color: #a43820;
+    margin: 3px 0;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* ============================== HEADER ============================== */
+  
+  header {
+    background-image: url(/assets/images/Background/asso-myron-uLBraHlT1Uw-unsplash.jpg);
+    height: 950px;
+    width: 100%;
+    background-size: cover;
+    background-position: 30%;
+  }
+  
+  .headerTitre {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px black;
+    position: relative;
+    left: 200px;
+    top: 400px;
+    width: 600px;
+  }
+  
+  .headerMenus {
+    display: flex;
+    gap: 80px;
+    position: relative;
+    left: 200px;
+    top: 500px;
+    color: white;
+    width: 600px;
+    text-shadow: 1px 1px 1px black;
+  }
+  
+  .headerMenus h2 {
+    font-size: 1.2rem;
+  }
+  
+  .headerMenus a {
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background-image: url(/assets/icons/icons8-chevron-droit-50\ marron.png);
+  }
+  
+  .creaCompte {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+  }
+  
+  .headerListe {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+  }
