@@ -1,43 +1,41 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Merienda";
-  }
-  
-  body {
-    width: 100%;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merienda";
+}
 
-  /* ============================== NAVBAR ============================== */
+body {
+  width: 100%;
+}
 
-  .menusListe {
-    height: 60px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #46211a0e;
-    display: none; /* **************HIDE************* */
-  }
-  
-  .menusListe a {
+/* ============================== NAVBAR ============================== */
+
+.menusListe {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #46211a0e;
+  display: none; /* **************HIDE************* */
+
+  a {
     color: black;
     font-weight: bold;
     text-decoration: none;
     font-size: 1.2rem;
     margin-right: 80px;
   }
-  
-  .hamBurger {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    right: 30px;
-    padding-top: 10px;
-  }
-  
-  .hamBurger span {
+}
+
+.hamBurger {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 30px;
+  padding-top: 10px;
+  span {
     display: flex;
     flex-flow: column;
     height: 8px;
@@ -47,27 +45,26 @@
     border-radius: 8px;
     cursor: pointer;
   }
-  
-  /* ============================== HEADER ============================== */
-  
-  header {
-    background-image: url(/assets/images/Background/asso-myron-uLBraHlT1Uw-unsplash.jpg);
-    height: 950px;
-    width: 100%;
-    background-size: cover;
-    background-position: 30%;
-  }
-  
+}
+
+/* ============================== HEADER ============================== */
+
+header {
+  background-image: url(/assets/images/Background/asso-myron-uLBraHlT1Uw-unsplash.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: 30%;
+
   .headerTitre {
     color: white;
-    font-size: 2rem;
-    text-shadow: 2px 2px 2px black;
+    font-size: 2.2rem;
+    text-shadow: 3px 3px 3px #46211a;
     position: relative;
-    left: 200px;
+    left: 180px;
     top: 400px;
     width: 600px;
   }
-  
+
   .headerMenus {
     display: flex;
     gap: 80px;
@@ -76,28 +73,315 @@
     top: 500px;
     color: white;
     width: 600px;
+    text-shadow: 1px 1px 1px #46211a;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    a {
+      text-decoration: none;
+      width: 50px;
+      height: 50px;
+      background-image: url(/assets/icons/icons8-chevron-droit-50\ marron.png);
+    }
+  }
+}
+
+.creaCompte {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+}
+
+.headerListe {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+}
+
+/* ============================== SECTION TITRE ============================== */
+
+.sectionTitre {
+  background-color: #46211a;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentTitre {
+  height: 400px;
+  width: 1000px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  p {
+    color: white;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 2px black;
+  }
+}
+
+.titrePrincipal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    height: 130px;
+  }
+
+  h1 {
+    font-size: 6rem;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+  }
+}
+
+.contentSoustitre {
+  width: 1000px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+
+  h2 {
+    border-left: 2px solid #a43820;
+    border-bottom: 2px solid #a43820;
+    margin-bottom: 15px;
+    padding-left: 5px;
+  }
+}
+
+/* ============================== SECTION MAPS ============================== */
+
+.sectionMaps {
+  background-color: #693d3d81;
+  height: 600px;
+}
+
+.contentMaps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  height: 100%;
+  width: 100%;
+}
+
+.texteRecherche {
+  width: 450px;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    letter-spacing: 1px;
+  }
+
+  a {
+    height: 20px;
+    width: 80px;
+    color: white;
+    background-color: #a43820;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 5px;
+    border-radius: 5px;
+  }
+}
+
+/* ============================== SECTION LAYOUT ============================== */
+
+.sectionLayout {
+  background-color: #46211a;
+  height: 800px;
+  width: 100%;
+}
+
+.contentLayout {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.texteLayout {
+  color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  width: 1000px;
+  height: 300px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  margin-top: 50px;
+
+  p {
+    width: 800px;
+  }
+}
+
+.photosLayout {
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+
+.photosLayout_00 {
+  width: 25%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(/assets/images/section4/clement-remond-xVRw4WY2Rgs-unsplash.jpg);
+  background-position: 0 35%;
+}
+
+.photosLayout_01 {
+  width: 25%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(/assets/images/section4/dan-asaki-wC_YNVgIRdA-unsplash.jpg);
+  background-position: 0 50%;
+}
+
+.photosLayout_02 {
+  width: 25%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(/assets/images/section4/diogo-fagundes-dbBKeN1s8GY-unsplash.jpg);
+  background-position: 0 100%;
+}
+
+.photosLayout_03 {
+  width: 25%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(/assets/images/section4/les-elby-pe-eF3pFjYI-unsplash.jpg);
+}
+
+/* ============================== SECTION OPTIONS ============================== */
+
+.sectionOptions {
+  background-color: #693d3d81;
+  height: 800px;
+}
+
+.contentOptions_00 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  height: 100%;
+  width: 100%;
+}
+
+.photosOptions {
+  background-image: url(/assets/images/section5/shot-by-cerqueira-cCkheI30Jd4-unsplash.jpg);
+  width: 600px;
+  height: 550px;
+  background-size: cover;
+}
+
+.texteOptions {
+  width: 600px;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+
+.texteOptions h2 {
+  font-size: 2rem;
+}
+
+.texteOptions p {
+  letter-spacing: 1px;
+}
+
+.contentOption_01 {
+  display: flex;
+  flex-flow: row;
+  margin-top: 50px;
+  gap: 50px;
+
+  img {
+    width: 50px;
+  }
+}
+
+/* ============================== SECTION CONTACT ============================== */
+
+.sectionContact {
+  background-color: #46211a;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.contactForm {
+  height: 400px;
+  color: white;
+
+  h2 {
+    font-size: 2rem;
+    margin: 20px 0;
     text-shadow: 1px 1px 1px black;
   }
-  
-  .headerMenus h2 {
-    font-size: 1.2rem;
+}
+
+.social {
+  text-align: center;
+  margin-top: 180px;
+
+  img {
+    height: 30px;
   }
-  
-  .headerMenus a {
-    text-decoration: none;
-    width: 50px;
-    height: 50px;
-    background-image: url(/assets/icons/icons8-chevron-droit-50\ marron.png);
+}
+
+.contentForm {
+  width: 450px;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+
+  input,
+  textarea {
+    height: 40px;
+    width: 100%;
+    border-radius: 2px;
   }
-  
-  .creaCompte {
-    display: flex;
-    flex-flow: column;
-    gap: 15px;
+
+  input[type="submit"] {
+    width: 25%;
+    background-color: #a43820;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
-  
-  .headerListe {
-    display: flex;
-    flex-flow: column;
-    gap: 15px;
+
+  input[type="submit"]:hover {
+    background-color: #a438207d;
   }
+}
