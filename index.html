@@ -6,13 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SpotPhoto</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/Logo-icons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/Logo-icons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/Logo-icons/favicon-16x16.png" />
+
+  <!-- ====================== FAVICONS ====================== -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favIcons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favIcons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favIcons/favicon-16x16.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Merienda:wght@400;700&family=Oswald:wght@200;700&display=swap"
-    rel="stylesheet" />
+
+  <!-- ====================== FONTS ====================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Merienda:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- ====================== BS & JS & CSS ====================== -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <script defer src="/script.js"></script>
+
   <link rel="stylesheet" href="/style.css" />
 </head>
 
@@ -20,7 +35,7 @@
 
   <!-- ======================== NAVBAR ======================== -->
 
-  <nav>
+  <!-- <nav>
     <div class="hamBurger">
       <span></span>
       <span></span>
@@ -33,73 +48,83 @@
       <a href="#">Mon compte</a>
       <a href="#">Nous contacter</a>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- ======================== HEADER ======================== -->
 
   <header>
-    <div class="headerTitre">
-      <h2>
-        TROUVER L'ENDROIT <br />
-        QUI VOUS CONVIENT
-      </h2>
-    </div>
-    <div class="headerMenus">
-      <div class="creaCompte">
-        <h2>CREER VOTRE COMPTE</h2>
-        <p>
-          Accédez au meilleur site <br />pour savoir ou réaliser vos shootings
-        </p>
-        <a href="#"></a>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="headerTitre">
+            <h2>
+              TROUVER L'ENDROIT <br />
+              QUI VOUS CONVIENT
+            </h2>
+          </div>
+        </div>
       </div>
-      <div class="headerListe">
-        <h2>LISTE DES LIEUX</h2>
-        <p>Trouvez l'endroit parfait <br />dans votre région</p>
-        <a href="#"></a>
+      <div class="row">
+        <div class="col-sm-6 headerMenus">
+          <div class="creaCompte">
+            <h2>CREER VOTRE COMPTE</h2>
+            <p>
+              Accédez au meilleur site <br />pour savoir ou réaliser vos shootings
+            </p>
+            <a href="#"></a>
+          </div>
+        </div>
+        <div class="col-sm-6 headerMenus">
+          <div class="headerListe">
+            <h2>LISTE DES LIEUX</h2>
+            <p>Trouvez l'endroit parfait <br />dans votre région</p>
+            <a href="#"></a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-    <!-- ======================== SECTION TITRE ======================== -->
+  <!-- ======================== SECTION TITRE ======================== -->
 
-    <section class="sectionTitre">
-      <div class="contentTitre">
-        <div class="titrePrincipal">
-          <img src="/assets/images/Logo-blanc.png" alt="" />
-          <h1>SPOTPHOTO</h1>
-        </div>
+  <!-- <section class="sectionTitre">
+    <div class="contentTitre">
+      <div class="titrePrincipal">
+        <img src="/assets/images/logo/whiteLogo.png" alt="" />
+        <h1>SPOTPHOTO</h1>
+      </div>
+      <p>
+        Visitez notre site pour trouver votre prochain lieu pour vos shootings
+      </p>
+    </div>
+    <div class="contentSoustitre">
+      <div class="soustitreLeft">
+        <h2>Lorem, ipsum.</h2>
         <p>
-          Visitez notre site pour trouver votre prochain lieu pour vos shootings
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+          mollitia.
         </p>
       </div>
-      <div class="contentSoustitre">
-        <div class="soustitreLeft">
-          <h2>Lorem, ipsum.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-            mollitia.
-          </p>
-        </div>
-        <div class="soustitreMiddle">
-          <h2>Lorem, ipsum.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-            mollitia.
-          </p>
-        </div>
-        <div class="soustitreRight">
-          <h2>Lorem, ipsum.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-            mollitia.
-          </p>
-        </div>
+      <div class="soustitreMiddle">
+        <h2>Lorem, ipsum.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+          mollitia.
+        </p>
       </div>
-    </section>
+      <div class="soustitreRight">
+        <h2>Lorem, ipsum.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+          mollitia.
+        </p>
+      </div>
+    </div>
+  </section> -->
 
-    <!-- ======================== SECTION MAPS ======================== -->
+  <!-- ======================== SECTION MAPS ======================== -->
 
-  <section class="sectionMaps">
+  <!-- <section class="sectionMaps">
     <div class="contentMaps">
       <div class="texteRecherche">
         <h2>Lorem, ipsum dolor.</h2>
@@ -118,11 +143,11 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
-  </section>
+  </section> -->
 
-    <!-- ======================== SECTION LAYOUT ======================== -->
+  <!-- ======================== SECTION LAYOUT ======================== -->
 
-  <section class="sectionLayout">
+  <!-- <section class="sectionLayout">
     <div class="contentLayout">
       <div class="texteLayout">
         <h2>Lorem.</h2>
@@ -139,11 +164,11 @@
         <div class="photosLayout_03"></div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-    <!-- ======================== SECTION OPTIONS ======================== -->
+  <!-- ======================== SECTION OPTIONS ======================== -->
 
-  <section class="sectionOptions">
+  <!-- <section class="sectionOptions">
     <div class="contentOptions_00">
       <div class="photosOptions"></div>
       <div class="texteOptions">
@@ -154,13 +179,13 @@
         </p>
         <div class="contentOptions_01">
           <div class="optionsLeft">
-            <img src="/assets/icons/icons8-appareil-photo-slr-100.png" alt="">
+            <img src="/assets/icons/sectionIcons/cameraIcons.png" alt="">
             <h2>Lorem ipsum dolor sit.</h2>
             <br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos facilis pariatur eveniet dicta?</p>
           </div>
           <div class="optionsRight">
-            <img src="/assets/icons/icons8-aperture-100.png" alt="">
+            <img src="/assets/icons/sectionIcons/apertureIcons.png" alt="">
             <h2>Lorem ipsum dolor sit.</h2>
             <br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos facilis pariatur eveniet dicta?</p>
@@ -170,19 +195,19 @@
     </div>
     </div>
     </div>
-  </section>
+  </section> -->
 
-    <!-- ======================== SECTION CONTACT ======================== -->
+  <!-- ======================== SECTION CONTACT ======================== -->
 
-  <section class="sectionContact">
+  <!-- <section class="sectionContact">
     <div class="contactForm">
-      <img src="/assets/icons/icons8-envoyer-64.png" alt="">
+      <img src="/assets/icons/contactIcons/sendIcons.png" alt="">
       <h2>Nous Contacter</h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, iste!</p>
       <div class="social">
-        <a href="#"><img src="/assets/icons/icons8-instagram-64.png" alt=""></a>
-        <a href="#"><img src="/assets/icons/icons8-logo-twitter-encadré-64.png" alt=""></a>
-        <a href="#"><img src="/assets/icons/icons8-facebook-nouveau-64.png" alt=""></a>
+        <a href="#"><img src="/assets/icons/socialIcons/fbIcons.png" alt=""></a>
+        <a href="#"><img src="/assets/icons/socialIcons/instaIcons.png" alt=""></a>
+        <a href="#"><img src="/assets/icons/socialIcons/twitterIcons.png" alt=""></a>
       </div>
     </div>
     <div class="contentForm">
@@ -193,7 +218,7 @@
       <input type="submit" value="Envoyer">
     </div>
     </div>
-  </section>
+  </section> -->
 </body>
 
 </html>

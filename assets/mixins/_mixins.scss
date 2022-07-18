@@ -1,0 +1,15 @@
+@mixin flexCenter {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin layoutOptions {
+  width: 25%;
+  height: 100%;
+  background-size: cover;
+}
+
+@mixin backGround {
+  background-size: cover;
+  background-position: center;
+}

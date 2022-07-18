@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Merienda";
+  font-family: "Merienda", "Cursive";
+  letter-spacing: 1px;
+  color: white;
 }
 
 body {
@@ -47,38 +49,34 @@ body {
 
 /* ============================== HEADER ============================== */
 header {
-  background-image: url(/assets/images/Background/asso-myron-uLBraHlT1Uw-unsplash.jpg);
+  background-image: url(/assets/images/backGround/headerBackground.jpg);
   height: 100vh;
   background-size: cover;
-  background-position: 30%;
+  background-position: center;
 }
 header .headerTitre {
-  color: white;
-  font-size: 2.2rem;
-  text-shadow: 3px 3px 3px #46211a;
   position: relative;
-  left: 180px;
-  top: 400px;
-  width: 600px;
+  top: 500px;
+}
+header .headerTitre h2 {
+  font-size: 1.6rem;
+  font-family: "Merienda One", "Cursive";
+  text-shadow: 3px 3px 3px #46211a;
+  text-align: center;
 }
 header .headerMenus {
-  display: flex;
-  gap: 80px;
   position: relative;
-  left: 200px;
   top: 500px;
-  color: white;
-  width: 600px;
   text-shadow: 1px 1px 1px #46211a;
 }
 header .headerMenus h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 header .headerMenus a {
   text-decoration: none;
   width: 50px;
   height: 50px;
-  background-image: url(/assets/icons/icons8-chevron-droit-50\ marron.png);
+  background-image: url(/assets/icons/headerIcons/chevronIcons.png);
 }
 
 .creaCompte {
@@ -232,7 +230,7 @@ header .headerMenus a {
   width: 25%;
   height: 100%;
   background-size: cover;
-  background-image: url(/assets/images/section4/clement-remond-xVRw4WY2Rgs-unsplash.jpg);
+  background-image: url(/assets/images/layout/clement-remond.jpg);
   background-position: 0 35%;
 }
 
@@ -240,7 +238,7 @@ header .headerMenus a {
   width: 25%;
   height: 100%;
   background-size: cover;
-  background-image: url(/assets/images/section4/dan-asaki-wC_YNVgIRdA-unsplash.jpg);
+  background-image: url(/assets/images/layout/dan-asaki.jpg);
   background-position: 0 50%;
 }
 
@@ -248,7 +246,7 @@ header .headerMenus a {
   width: 25%;
   height: 100%;
   background-size: cover;
-  background-image: url(/assets/images/section4/diogo-fagundes-dbBKeN1s8GY-unsplash.jpg);
+  background-image: url(/assets/images/layout/diogo-fagundes.jpg);
   background-position: 0 100%;
 }
 
@@ -256,7 +254,7 @@ header .headerMenus a {
   width: 25%;
   height: 100%;
   background-size: cover;
-  background-image: url(/assets/images/section4/les-elby-pe-eF3pFjYI-unsplash.jpg);
+  background-image: url(/assets/images/layout/les-elby-pe.jpg);
 }
 
 /* ============================== SECTION OPTIONS ============================== */
@@ -267,15 +265,15 @@ header .headerMenus a {
 
 .contentOptions_00 {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 80px;
   height: 100%;
   width: 100%;
 }
 
 .photosOptions {
-  background-image: url(/assets/images/section5/shot-by-cerqueira-cCkheI30Jd4-unsplash.jpg);
+  background-image: url(/assets/images/section/cerqueira.jpg);
   width: 600px;
   height: 550px;
   background-size: cover;

@@ -1,8 +1,13 @@
+@import "./assets/mixins/mixins";
+@import "./assets/variables/variables";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Merienda";
+  font-family: $fontPrinc;
+  letter-spacing: 1px;
+  color: white;
 }
 
 body {
@@ -35,12 +40,13 @@ body {
   width: 50px;
   right: 30px;
   padding-top: 10px;
+
   span {
     display: flex;
     flex-flow: column;
     height: 8px;
     width: 45px;
-    background-color: #a43820;
+    background-color: $colorsecond;
     margin: 3px 0;
     border-radius: 8px;
     cursor: pointer;
@@ -50,40 +56,38 @@ body {
 /* ============================== HEADER ============================== */
 
 header {
-  background-image: url(/assets/images/Background/asso-myron-uLBraHlT1Uw-unsplash.jpg);
+  background-image: url(/assets/images/backGround/headerBackground.jpg);
   height: 100vh;
-  background-size: cover;
-  background-position: 30%;
+  @include backGround;
 
   .headerTitre {
-    color: white;
-    font-size: 2.2rem;
-    text-shadow: 3px 3px 3px #46211a;
     position: relative;
-    left: 180px;
-    top: 400px;
-    width: 600px;
+    top: 500px;
+
+    h2 {
+      font-size: 1.6rem;
+      font-family: $fontSecond;
+      text-shadow: 3px 3px 3px $colorPrim;
+      text-align: center;
+    }
   }
 
   .headerMenus {
-    display: flex;
-    gap: 80px;
     position: relative;
-    left: 200px;
     top: 500px;
-    color: white;
-    width: 600px;
-    text-shadow: 1px 1px 1px #46211a;
+    text-shadow: 1px 1px 1px $colorPrim;
+
+    // =========================================================== ICI ====================================================
 
     h2 {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     a {
       text-decoration: none;
       width: 50px;
       height: 50px;
-      background-image: url(/assets/icons/icons8-chevron-droit-50\ marron.png);
+      background-image: url(/assets/icons/headerIcons/chevronIcons.png);
     }
   }
 }
@@ -103,7 +107,7 @@ header {
 /* ============================== SECTION TITRE ============================== */
 
 .sectionTitre {
-  background-color: #46211a;
+  background-color: $colorPrim;
   height: 700px;
   width: 100%;
   display: flex;
@@ -117,8 +121,7 @@ header {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
   gap: 20px;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
@@ -156,8 +159,8 @@ header {
   text-shadow: 1px 1px 1px black;
 
   h2 {
-    border-left: 2px solid #a43820;
-    border-bottom: 2px solid #a43820;
+    border-left: 2px solid $colorsecond;
+    border-bottom: 2px solid $colorsecond;
     margin-bottom: 15px;
     padding-left: 5px;
   }
@@ -194,7 +197,7 @@ header {
     height: 20px;
     width: 80px;
     color: white;
-    background-color: #a43820;
+    background-color: $colorsecond;
     text-decoration: none;
     font-weight: bold;
     padding: 5px 5px;
@@ -205,7 +208,7 @@ header {
 /* ============================== SECTION LAYOUT ============================== */
 
 .sectionLayout {
-  background-color: #46211a;
+  background-color: $colorPrim;
   height: 800px;
   width: 100%;
 }
@@ -224,8 +227,7 @@ header {
   color: white;
   display: flex;
   flex-flow: column;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
   text-align: center;
   gap: 20px;
   width: 1000px;
@@ -246,34 +248,26 @@ header {
 }
 
 .photosLayout_00 {
-  width: 25%;
-  height: 100%;
-  background-size: cover;
-  background-image: url(/assets/images/section4/clement-remond-xVRw4WY2Rgs-unsplash.jpg);
+  @include layoutOptions;
+  background-image: url(/assets/images/layout/clement-remond.jpg);
   background-position: 0 35%;
 }
 
 .photosLayout_01 {
-  width: 25%;
-  height: 100%;
-  background-size: cover;
-  background-image: url(/assets/images/section4/dan-asaki-wC_YNVgIRdA-unsplash.jpg);
+  @include layoutOptions;
+  background-image: url(/assets/images/layout/dan-asaki.jpg);
   background-position: 0 50%;
 }
 
 .photosLayout_02 {
-  width: 25%;
-  height: 100%;
-  background-size: cover;
-  background-image: url(/assets/images/section4/diogo-fagundes-dbBKeN1s8GY-unsplash.jpg);
+  @include layoutOptions;
+  background-image: url(/assets/images/layout/diogo-fagundes.jpg);
   background-position: 0 100%;
 }
 
 .photosLayout_03 {
-  width: 25%;
-  height: 100%;
-  background-size: cover;
-  background-image: url(/assets/images/section4/les-elby-pe-eF3pFjYI-unsplash.jpg);
+  @include layoutOptions;
+  background-image: url(/assets/images/layout/les-elby-pe.jpg);
 }
 
 /* ============================== SECTION OPTIONS ============================== */
@@ -285,15 +279,14 @@ header {
 
 .contentOptions_00 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   gap: 80px;
   height: 100%;
   width: 100%;
 }
 
 .photosOptions {
-  background-image: url(/assets/images/section5/shot-by-cerqueira-cCkheI30Jd4-unsplash.jpg);
+  background-image: url(/assets/images/section/cerqueira.jpg);
   width: 600px;
   height: 550px;
   background-size: cover;
@@ -328,13 +321,12 @@ header {
 /* ============================== SECTION CONTACT ============================== */
 
 .sectionContact {
-  background-color: #46211a;
+  background-color: $colorPrim;
   height: 500px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
   gap: 100px;
 }
 
@@ -373,7 +365,7 @@ header {
 
   input[type="submit"] {
     width: 25%;
-    background-color: #a43820;
+    background-color: $colorsecond;
     color: white;
     padding: 12px 20px;
     border: none;
