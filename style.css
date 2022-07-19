@@ -12,39 +12,34 @@ body {
 }
 
 /* ============================== NAVBAR ============================== */
-.menusListe {
-  height: 60px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+nav .navLinks {
+  position: relative;
+  left: -100%;
+}
+nav .navLinks.active {
+  left: 0%;
+  height: 100vh;
+  width: 50%;
   background-color: rgba(70, 33, 26, 0.0549019608);
-  display: none; /* **************HIDE************* */
-}
-.menusListe a {
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin-right: 80px;
-}
-
-.hamBurger {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  right: 30px;
-  padding-top: 10px;
-}
-.hamBurger span {
   display: flex;
   flex-flow: column;
-  height: 8px;
-  width: 45px;
-  background-color: #a43820;
-  margin: 3px 0;
-  border-radius: 8px;
-  cursor: pointer;
+  justify-content: center;
+  padding: 0 10px;
+  gap: 50px;
+  transition: all 0.5s ease;
+}
+nav .navLinks.active a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+nav .hamBurger {
+  display: block;
+  position: absolute;
+  width: auto;
+  left: 10px;
+  top: 10px;
+  border: 1px solid red;
 }
 
 /* ============================== HEADER ============================== */
@@ -54,41 +49,37 @@ header {
   background-size: cover;
   background-position: center;
 }
-header .headerTitre {
+header .headerContent {
   position: relative;
   top: 500px;
 }
-header .headerTitre h2 {
+header .headerContent .headerTitre {
+  margin-bottom: 20px;
+}
+header .headerContent .headerTitre h2 {
   font-size: 1.6rem;
   font-family: "Merienda One", "Cursive";
   text-shadow: 3px 3px 3px #46211a;
   text-align: center;
 }
-header .headerMenus {
-  position: relative;
-  top: 500px;
+header .headerContent .headerMenus {
+  width: auto;
   text-shadow: 1px 1px 1px #46211a;
+  margin: 20px 0;
 }
-header .headerMenus h2 {
-  font-size: 1rem;
+header .headerContent .headerMenus h2 {
+  font-size: 0.6rem;
 }
-header .headerMenus a {
+header .headerContent .headerMenus p {
+  font-size: 0.4rem;
+  margin-bottom: 5px;
+}
+header .headerContent .headerMenus a {
   text-decoration: none;
-  width: 50px;
-  height: 50px;
-  background-image: url(/assets/icons/headerIcons/chevronIcons.png);
+  width: 20px;
 }
-
-.creaCompte {
-  display: flex;
-  flex-flow: column;
-  gap: 15px;
-}
-
-.headerListe {
-  display: flex;
-  flex-flow: column;
-  gap: 15px;
+header .headerContent .headerMenus a img {
+  width: 20px;
 }
 
 /* ============================== SECTION TITRE ============================== */

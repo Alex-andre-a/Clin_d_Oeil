@@ -16,40 +16,40 @@ body {
 
 /* ============================== NAVBAR ============================== */
 
-.menusListe {
-  height: 60px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #46211a0e;
-  display: none; /* **************HIDE************* */
+nav {
 
-  a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-right: 80px;
+  .navLinks{
+    position: relative;
+    left: -100%;
   }
-}
 
-.hamBurger {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  right: 30px;
-  padding-top: 10px;
-
-  span {
+  .navLinks.active {
+    left: 0%;
+    height: 100vh;
+    width: 50%;
+    background-color: #46211a0e;
     display: flex;
     flex-flow: column;
-    height: 8px;
-    width: 45px;
-    background-color: $colorsecond;
-    margin: 3px 0;
-    border-radius: 8px;
-    cursor: pointer;
+    justify-content: center;
+    padding: 0 10px;
+    gap: 50px;
+    transition: all 0.5s ease;
+
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+  }
+
+  .hamBurger {
+    display: block;
+    position: absolute;
+    width: auto;
+    left: 10px;
+    top: 10px;
+    border: 1px solid red;
   }
 }
 
@@ -60,48 +60,45 @@ header {
   height: 100vh;
   @include backGround;
 
-  .headerTitre {
+  .headerContent {
     position: relative;
     top: 500px;
 
-    h2 {
-      font-size: 1.6rem;
-      font-family: $fontSecond;
-      text-shadow: 3px 3px 3px $colorPrim;
-      text-align: center;
+    .headerTitre {
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 1.6rem;
+        font-family: $fontSecond;
+        text-shadow: 3px 3px 3px $colorPrim;
+        text-align: center;
+      }
+    }
+
+    .headerMenus {
+      width: auto;
+      text-shadow: 1px 1px 1px $colorPrim;
+      margin: 20px 0;
+
+      h2 {
+        font-size: 0.6rem;
+      }
+
+      p {
+        font-size: 0.4rem;
+        margin-bottom: 5px;
+      }
+
+      a {
+        text-decoration: none;
+        width: 20px;
+
+        img {
+          width: 20px;
+        }
+      }
     }
   }
-
-  .headerMenus {
-    position: relative;
-    top: 500px;
-    text-shadow: 1px 1px 1px $colorPrim;
-
-    // =========================================================== ICI ====================================================
-
-    h2 {
-      font-size: 1rem;
-    }
-
-    a {
-      text-decoration: none;
-      width: 50px;
-      height: 50px;
-      background-image: url(/assets/icons/headerIcons/chevronIcons.png);
-    }
-  }
-}
-
-.creaCompte {
-  display: flex;
-  flex-flow: column;
-  gap: 15px;
-}
-
-.headerListe {
-  display: flex;
-  flex-flow: column;
-  gap: 15px;
 }
 
 /* ============================== SECTION TITRE ============================== */
