@@ -41,12 +41,25 @@ nav {
       text-decoration: none;
       font-size: 0.8rem;
     }
+
+    .closeNav{
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border: 1px solid black;
+
+      img{
+        width: 30px;
+      }
+    }
+
+
   }
 
   .hamBurger {
     display: block;
     position: absolute;
-    width: auto;
     left: 10px;
     top: 10px;
     border: 1px solid red;

@@ -33,10 +33,19 @@ nav .navLinks.active a {
   text-decoration: none;
   font-size: 0.8rem;
 }
+nav .navLinks.active .closeNav {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 1px solid black;
+}
+nav .navLinks.active .closeNav img {
+  width: 30px;
+}
 nav .hamBurger {
   display: block;
   position: absolute;
-  width: auto;
   left: 10px;
   top: 10px;
   border: 1px solid red;
