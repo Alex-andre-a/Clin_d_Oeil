@@ -17,371 +17,43 @@ body {
 /* ============================== NAVBAR ============================== */
 
 nav {
-
-  .navLinks{
-    position: relative;
-    left: -100%;
-  }
-
-  .navLinks.active {
-    left: 0%;
-    height: 100vh;
-    width: 50%;
-    background-color: #46211a0e;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    padding: 0 10px;
-    gap: 50px;
-    transition: all 0.5s ease;
-
-
-    a {
-      color: black;
-      text-decoration: none;
-      font-size: 0.8rem;
-    }
-
-    .closeNav{
-      display: block;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      border: 1px solid black;
-
-      img{
-        width: 30px;
-      }
-    }
-  }
-
-  .hamBurger {
-    display: block;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    border: 1px solid red;
-  }
+  display: none;
 }
-
 /* ============================== HEADER ============================== */
 
 header {
   background-image: url(/assets/images/backGround/headerBackground.jpg);
   height: 100vh;
   @include backGround;
-
-  .headerContent {
-    position: relative;
-    top: 500px;
-
-    .headerTitre {
-      margin-bottom: 20px;
-
-      h2 {
-        font-size: 1.6rem;
-        font-family: $fontSecond;
-        text-shadow: 3px 3px 3px $colorPrim;
-        text-align: center;
-      }
-    }
-
-    .headerMenus {
-      width: auto;
-      text-shadow: 1px 1px 1px $colorPrim;
-      margin: 20px 0;
-
-      h2 {
-        font-size: 0.6rem;
-      }
-
-      p {
-        font-size: 0.4rem;
-        margin-bottom: 5px;
-      }
-
-      a {
-        text-decoration: none;
-        width: 20px;
-
-        img {
-          width: 20px;
-        }
-      }
-    }
-  }
 }
 
-/* ============================== SECTION TITRE ============================== */
-
-.sectionTitre {
-  background-color: $colorPrim;
-  height: 700px;
-  width: 100%;
+.headerContent {
+  position: absolute;
+  top: 55%;
+  right: 5%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contentTitre {
-  height: 400px;
-  width: 1000px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  @include flexCenter;
-  gap: 20px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  p {
-    color: white;
-    font-size: 1.1rem;
-    text-shadow: 2px 2px 2px black;
-  }
-}
-
-.titrePrincipal {
-  display: flex;
-  align-items: center;
+  flex-flow: column wrap;
   gap: 10px;
 
-  img {
-    height: 130px;
+  .headerTitre h1 {
+    font-size: 3.2rem;
+    font-family: $fontSecond;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 5px $colorsecond;
   }
 
-  h1 {
-    font-size: 6rem;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-  }
-}
+  .headerLinks {
+    display: flex;
+    gap: 40px;
 
-.contentSoustitre {
-  width: 1000px;
-  height: 200px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 50px;
-  color: white;
-  text-shadow: 1px 1px 1px black;
+    img {
+      height: 25px;
+    }
 
-  h2 {
-    border-left: 2px solid $colorsecond;
-    border-bottom: 2px solid $colorsecond;
-    margin-bottom: 15px;
-    padding-left: 5px;
-  }
-}
-
-/* ============================== SECTION MAPS ============================== */
-
-.sectionMaps {
-  background-color: #693d3d81;
-  height: 600px;
-}
-
-.contentMaps {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  height: 100%;
-  width: 100%;
-}
-
-.texteRecherche {
-  width: 450px;
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  p {
-    letter-spacing: 1px;
-  }
-
-  a {
-    height: 20px;
-    width: 80px;
-    color: white;
-    background-color: $colorsecond;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 5px;
-    border-radius: 5px;
-  }
-}
-
-/* ============================== SECTION LAYOUT ============================== */
-
-.sectionLayout {
-  background-color: $colorPrim;
-  height: 800px;
-  width: 100%;
-}
-
-.contentLayout {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-}
-
-.texteLayout {
-  color: white;
-  display: flex;
-  flex-flow: column;
-  @include flexCenter;
-  text-align: center;
-  gap: 20px;
-  width: 1000px;
-  height: 300px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  margin-top: 50px;
-
-  p {
-    width: 800px;
-  }
-}
-
-.photosLayout {
-  width: 100%;
-  height: 400px;
-  display: flex;
-}
-
-.photosLayout_00 {
-  @include layoutOptions;
-  background-image: url(/assets/images/layout/clement-remond.jpg);
-  background-position: 0 35%;
-}
-
-.photosLayout_01 {
-  @include layoutOptions;
-  background-image: url(/assets/images/layout/dan-asaki.jpg);
-  background-position: 0 50%;
-}
-
-.photosLayout_02 {
-  @include layoutOptions;
-  background-image: url(/assets/images/layout/diogo-fagundes.jpg);
-  background-position: 0 100%;
-}
-
-.photosLayout_03 {
-  @include layoutOptions;
-  background-image: url(/assets/images/layout/les-elby-pe.jpg);
-}
-
-/* ============================== SECTION OPTIONS ============================== */
-
-.sectionOptions {
-  background-color: #693d3d81;
-  height: 800px;
-}
-
-.contentOptions_00 {
-  display: flex;
-  @include flexCenter;
-  gap: 80px;
-  height: 100%;
-  width: 100%;
-}
-
-.photosOptions {
-  background-image: url(/assets/images/section/cerqueira.jpg);
-  width: 600px;
-  height: 550px;
-  background-size: cover;
-}
-
-.texteOptions {
-  width: 600px;
-  display: flex;
-  flex-flow: column;
-  gap: 20px;
-}
-
-.texteOptions h2 {
-  font-size: 2rem;
-}
-
-.texteOptions p {
-  letter-spacing: 1px;
-}
-
-.contentOption_01 {
-  display: flex;
-  flex-flow: row;
-  margin-top: 50px;
-  gap: 50px;
-
-  img {
-    width: 50px;
-  }
-}
-
-/* ============================== SECTION CONTACT ============================== */
-
-.sectionContact {
-  background-color: $colorPrim;
-  height: 500px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  @include flexCenter;
-  gap: 100px;
-}
-
-.contactForm {
-  height: 400px;
-  color: white;
-
-  h2 {
-    font-size: 2rem;
-    margin: 20px 0;
-    text-shadow: 1px 1px 1px black;
-  }
-}
-
-.social {
-  text-align: center;
-  margin-top: 180px;
-
-  img {
-    height: 30px;
-  }
-}
-
-.contentForm {
-  width: 450px;
-  display: flex;
-  flex-flow: column;
-  gap: 20px;
-
-  input,
-  textarea {
-    height: 40px;
-    width: 100%;
-    border-radius: 2px;
-  }
-
-  input[type="submit"] {
-    width: 25%;
-    background-color: $colorsecond;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  input[type="submit"]:hover {
-    background-color: #a438207d;
+    a {
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.9);
+    }
   }
 }
