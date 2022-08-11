@@ -1,20 +1,17 @@
-const hamburger = document.querySelector(".hamBurger");
-const navLinks = document.querySelector(".navLinks");
-const closeNav = document.querySelector(".closeNav");
+const hamBurger = document.getElementById("hamBurger");
+const navBar = document.getElementById("navBar");
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
 
-hamburger.addEventListener("click", () => {
-  hamburger.style.display = "none";
-});
+hamBurger.onclick = function () {
+  hamBurger.classList.toggle("active"),
+    navBar.classList.toggle("active")
+    titre.style.opacity = 0.1;
+};
 
-closeNav.addEventListener("click", () => {
-  navLinks.classList.remove("active");
-});
 
-closeNav.addEventListener("click", () => {
-  hamburger.style.display = "block";
-});
-
+document.onclick = function (e) {
+  if (e.target.id !== "navBar" && e.target.id !== "hamBurger") {
+    hamBurger.classList.remove("active");
+    navBar.classList.remove("active");
+  }
+};

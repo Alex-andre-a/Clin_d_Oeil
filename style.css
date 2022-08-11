@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Merienda", "Cursive";
   letter-spacing: 1px;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 body {
@@ -12,8 +12,87 @@ body {
 }
 
 /* ============================== NAVBAR ============================== */
-nav {
+nav #hamBurger {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #a43820;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+}
+nav #hamBurger::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+nav #hamBurger span {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+nav #hamBurger::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(5px);
+  transition: 0.2s;
+}
+nav #hamBurger.active::before {
+  transform: translateY(0px) rotate(45deg);
+}
+nav #hamBurger.active span {
   display: none;
+}
+nav #hamBurger.active::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+nav #navBar {
+  position: absolute;
+  height: 100vh;
+  width: 35%;
+  background-color: #46211a;
+  top: -25px;
+  left: -50%;
+  transition: all 1s ease;
+  z-index: 9;
+}
+nav #navBar .navLinks {
+  height: 60%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+nav #navBar .navLinks a {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  font-size: 0.6rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+nav #navBar .navLinks a img {
+  height: 40px;
+}
+nav #navBar.active {
+  position: absolute;
+  left: 0;
+  transition: all 0.5s ease;
 }
 
 /* ============================== HEADER ============================== */
@@ -27,26 +106,26 @@ header {
 .headerContent {
   position: absolute;
   top: 55%;
-  right: 5%;
+  right: 3%;
   display: flex;
   flex-flow: column wrap;
   gap: 10px;
 }
 .headerContent .headerTitre h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-family: "Merienda One", "Cursive";
-  color: rgba(255, 255, 255, 0.9);
   text-shadow: 1px 1px 5px #a43820;
 }
 .headerContent .headerLinks {
   display: flex;
-  gap: 40px;
+  gap: 20px;
+  justify-content: end;
 }
 .headerContent .headerLinks img {
-  height: 25px;
+  height: 20px;
 }
 .headerContent .headerLinks a {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
 }/*# sourceMappingURL=style.css.map */
