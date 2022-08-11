@@ -62,16 +62,17 @@ nav #hamBurger.active::after {
 }
 nav #navBar {
   position: absolute;
-  height: 100vh;
+  height: 55vh;
   width: 35%;
-  background-color: #46211a;
+  background-color: rgba(70, 33, 26, 0.8549019608);
   top: -25px;
   left: -50%;
   transition: all 1s ease;
   z-index: 9;
+  border-bottom-right-radius: 750px;
 }
 nav #navBar .navLinks {
-  height: 60%;
+  height: 100%;
   display: flex;
   flex-flow: column;
   align-items: center;

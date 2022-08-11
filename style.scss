@@ -74,16 +74,17 @@ nav {
 
   #navBar {
     position: absolute;
-    height: 100vh;
+    height: 55vh;
     width: 35%;
-    background-color: $colorPrim;
+    background-color: #46211ada;
     top: -25px;
     left: -50%;
     transition: all 1s ease;
     z-index: 9;
+    border-bottom-right-radius: 750px;
 
     .navLinks {
-      height: 60%;
+      height: 100%;
       display: flex;
       flex-flow: column;
       align-items: center;
