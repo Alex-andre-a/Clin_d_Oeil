@@ -247,3 +247,65 @@ header {
     }
   }
 }
+
+/* ============================== CONTACT ============================== */
+
+.contactForm {
+  height: 500px;
+  background-color: $colorBackground_white;
+  position: relative;
+
+  .contactCircle {
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $colorBackground_brown;
+    opacity: 0.4;
+    border-radius: 0 0 0 500px;
+  }
+
+  .contactContent {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+
+    h2 {
+      color: $colorBackground_dark;
+      margin: 20px 0;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: $colorBackground_dark;
+      font-size: 0.8rem;
+      padding: 0 30px;
+      line-height: 22px;
+    }
+
+    form{
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      gap: 25px;
+
+      input, textarea{
+        border: 2px solid $colorSecond;
+        border-radius: 8px;
+        padding: 3px 5px;
+        background-color: $colorTexte;
+
+        &:focus{
+          outline-color: $colorBackground_dark;
+        }
+      }
+
+      input[type="button"]{
+        background-color: $colorBackground_dark;
+      }
+    }
+  }
+}
+
+
+
