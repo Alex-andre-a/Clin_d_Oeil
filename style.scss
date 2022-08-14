@@ -283,29 +283,27 @@ header {
       line-height: 22px;
     }
 
-    form{
+    form {
       display: flex;
       flex-flow: column wrap;
       align-items: center;
       gap: 25px;
 
-      input, textarea{
+      input,
+      textarea {
         border: 2px solid $colorSecond;
         border-radius: 8px;
         padding: 3px 5px;
         background-color: $colorTexte;
 
-        &:focus{
+        &:focus {
           outline-color: $colorBackground_dark;
         }
       }
 
-      input[type="button"]{
+      input[type="button"] {
         background-color: $colorBackground_dark;
       }
     }
   }
 }
-
-
-
