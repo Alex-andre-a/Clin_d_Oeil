@@ -173,7 +173,8 @@ header {
     p {
       color: $colorBackground_dark;
       font-size: 0.8rem;
-      padding: 0 30px;
+      width: 80%;
+      margin: 0 auto;
       line-height: 22px;
     }
   }
@@ -214,9 +215,10 @@ header {
     border: 2px solid $colorSecond;
     height: auto;
     width: 250px;
-    border-radius: 12px;
+    border-radius: 15px;
+    margin-bottom: 20px;
     background-color: $colorBackground_dark;
-    box-shadow: 1px 1px 10px 0px $colorBackground_dark;
+    box-shadow: 2px 2px 5px 0px $colorBackground_dark;
 
     h3 {
       font-size: 1rem;
@@ -251,7 +253,7 @@ header {
 /* ============================== CONTACT ============================== */
 
 .contactForm {
-  height: 500px;
+  height: 550px;
   background-color: $colorBackground_white;
   position: relative;
 
@@ -304,6 +306,235 @@ header {
       input[type="button"] {
         background-color: $colorBackground_dark;
       }
+    }
+  }
+}
+
+/* ============================== FOOTER ============================== */
+
+footer {
+  height: 80px;
+  background-color: $colorBackground_dark;
+  display: flex;
+  @include flexCenter;
+
+  .foot p {
+    font-size: 0.8rem;
+    color: $colorTexte;
+  }
+}
+
+/* ==================================================== RESPONSIVE ==================================================== */
+
+/* ============================== 426px ============================== */
+
+@media screen and (min-width: 426px) {
+  /* ============================== NAVBAR ============================== */
+
+  nav {
+    #hamBurger {
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+
+      &::before {
+        width: 25px;
+        height: 2px;
+      }
+
+      span {
+        width: 25px;
+        height: 2px;
+      }
+
+      &::after {
+        width: 25px;
+        height: 2px;
+      }
+    }
+
+    #navBar {
+      height: 60vh;
+      width: 20%;
+
+      .navLinks {
+        a {
+          font-size: 0.8rem;
+
+          img {
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ============================== HEADER ============================== */
+
+  .headerContent {
+    top: 60%;
+    right: 5%;
+
+    .headerTitre h1 {
+      font-size: 4rem;
+    }
+
+    .headerLinks {
+      gap: 25px;
+
+      img {
+        height: 30px;
+      }
+
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  /* ============================== ABOUT ============================== */
+
+  .about {
+    height: 400px;
+    background-color: $colorBackground_white;
+    position: relative;
+
+    .aboutContent {
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 30px;
+      }
+    }
+  }
+
+  /* ============================== OFFRES ============================== */
+
+  .offres {
+    .offresTitre h2 {
+      font-size: 2rem;
+    }
+
+    .offresSolo,
+    .offresDuo,
+    .offresStudio {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      text-align: center;
+      border: 2px solid $colorSecond;
+      height: auto;
+      width: 300px;
+      // =====================================================================================================
+      border-radius: 15px;
+      margin-bottom: 20px;
+      background-color: $colorBackground_dark;
+      box-shadow: 2px 2px 5px 0px $colorBackground_dark;
+
+      h3 {
+        font-size: 1rem;
+        margin: 10px 0;
+      }
+
+      img {
+        height: 300px;
+        width: 220px;
+        margin: 0 auto;
+      }
+
+      p {
+        font-size: 0.8rem;
+        line-height: 24px;
+        margin: 10px 0;
+        padding: 0 5px;
+      }
+
+      a {
+        color: $colorTexte;
+        border: 2px solid $colorSecond;
+        border-radius: 15px;
+        text-decoration: none;
+        width: 120px;
+        padding: 2px;
+        margin: 15px auto;
+      }
+    }
+  }
+
+  /* ============================== CONTACT ============================== */
+
+  .contactForm {
+    height: 550px;
+    background-color: $colorBackground_white;
+    position: relative;
+
+    .contactCircle {
+      height: 70%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background-color: $colorBackground_brown;
+      opacity: 0.4;
+      border-radius: 0 0 0 500px;
+    }
+
+    .contactContent {
+      position: absolute;
+      top: 20px;
+      text-align: center;
+
+      h2 {
+        color: $colorBackground_dark;
+        margin: 20px 0;
+        font-size: 1.5rem;
+      }
+
+      p {
+        color: $colorBackground_dark;
+        font-size: 0.8rem;
+        padding: 0 30px;
+        line-height: 22px;
+      }
+
+      form {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 25px;
+
+        input,
+        textarea {
+          border: 2px solid $colorSecond;
+          border-radius: 8px;
+          padding: 3px 5px;
+          background-color: $colorTexte;
+
+          &:focus {
+            outline-color: $colorBackground_dark;
+          }
+        }
+
+        input[type="button"] {
+          background-color: $colorBackground_dark;
+        }
+      }
+    }
+  }
+
+  /* ============================== FOOTER ============================== */
+
+  footer {
+    height: 80px;
+    background-color: $colorBackground_dark;
+    display: flex;
+    @include flexCenter;
+
+    .foot p {
+      font-size: 0.8rem;
+      color: $colorTexte;
     }
   }
 }

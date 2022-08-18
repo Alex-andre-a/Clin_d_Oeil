@@ -150,7 +150,8 @@ header {
 .about .aboutContent p {
   color: #1e150b;
   font-size: 0.8rem;
-  padding: 0 30px;
+  width: 80%;
+  margin: 0 auto;
   line-height: 22px;
 }
 .about .aboutCircle {
@@ -186,9 +187,10 @@ header {
   border: 2px solid #a43820;
   height: auto;
   width: 250px;
-  border-radius: 12px;
+  border-radius: 15px;
+  margin-bottom: 20px;
   background-color: #1e150b;
-  box-shadow: 1px 1px 10px 0px #1e150b;
+  box-shadow: 2px 2px 5px 0px #1e150b;
 }
 .offres .offresSolo h3,
 .offres .offresDuo h3,
@@ -225,7 +227,7 @@ header {
 
 /* ============================== CONTACT ============================== */
 .contactForm {
-  height: 500px;
+  height: 550px;
   background-color: #e8e7e0;
   position: relative;
 }
@@ -273,4 +275,194 @@ header {
 }
 .contactForm .contactContent form input[type=button] {
   background-color: #1e150b;
+}
+
+/* ============================== FOOTER ============================== */
+footer {
+  height: 80px;
+  background-color: #1e150b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .foot p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==================================================== RESPONSIVE ==================================================== */
+/* ============================== 426px ============================== */
+@media screen and (min-width: 426px) {
+  /* ============================== NAVBAR ============================== */
+  nav #hamBurger {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+  }
+  nav #hamBurger::before {
+    width: 25px;
+    height: 2px;
+  }
+  nav #hamBurger span {
+    width: 25px;
+    height: 2px;
+  }
+  nav #hamBurger::after {
+    width: 25px;
+    height: 2px;
+  }
+  nav #navBar {
+    height: 60vh;
+    width: 20%;
+  }
+  nav #navBar .navLinks a {
+    font-size: 0.8rem;
+  }
+  nav #navBar .navLinks a img {
+    height: 45px;
+  }
+  /* ============================== HEADER ============================== */
+  .headerContent {
+    top: 60%;
+    right: 5%;
+  }
+  .headerContent .headerTitre h1 {
+    font-size: 4rem;
+  }
+  .headerContent .headerLinks {
+    gap: 25px;
+  }
+  .headerContent .headerLinks img {
+    height: 30px;
+  }
+  .headerContent .headerLinks a {
+    font-size: 0.8rem;
+  }
+  /* ============================== ABOUT ============================== */
+  .about {
+    height: 400px;
+    background-color: #e8e7e0;
+    position: relative;
+  }
+  .about .aboutContent h2 {
+    font-size: 2rem;
+  }
+  .about .aboutContent p {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  /* ============================== OFFRES ============================== */
+  .offres .offresTitre h2 {
+    font-size: 2rem;
+  }
+  .offres .offresSolo,
+.offres .offresDuo,
+.offres .offresStudio {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #a43820;
+    height: auto;
+    width: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background-color: #1e150b;
+    box-shadow: 2px 2px 5px 0px #1e150b;
+  }
+  .offres .offresSolo h3,
+.offres .offresDuo h3,
+.offres .offresStudio h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  .offres .offresSolo img,
+.offres .offresDuo img,
+.offres .offresStudio img {
+    height: 300px;
+    width: 220px;
+    margin: 0 auto;
+  }
+  .offres .offresSolo p,
+.offres .offresDuo p,
+.offres .offresStudio p {
+    font-size: 0.8rem;
+    line-height: 24px;
+    margin: 10px 0;
+    padding: 0 5px;
+  }
+  .offres .offresSolo a,
+.offres .offresDuo a,
+.offres .offresStudio a {
+    color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #a43820;
+    border-radius: 15px;
+    text-decoration: none;
+    width: 120px;
+    padding: 2px;
+    margin: 15px auto;
+  }
+  /* ============================== CONTACT ============================== */
+  .contactForm {
+    height: 550px;
+    background-color: #e8e7e0;
+    position: relative;
+  }
+  .contactForm .contactCircle {
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #926747;
+    opacity: 0.4;
+    border-radius: 0 0 0 500px;
+  }
+  .contactForm .contactContent {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+  }
+  .contactForm .contactContent h2 {
+    color: #1e150b;
+    margin: 20px 0;
+    font-size: 1.5rem;
+  }
+  .contactForm .contactContent p {
+    color: #1e150b;
+    font-size: 0.8rem;
+    padding: 0 30px;
+    line-height: 22px;
+  }
+  .contactForm .contactContent form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 25px;
+  }
+  .contactForm .contactContent form input,
+.contactForm .contactContent form textarea {
+    border: 2px solid #a43820;
+    border-radius: 8px;
+    padding: 3px 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .contactForm .contactContent form input:focus,
+.contactForm .contactContent form textarea:focus {
+    outline-color: #1e150b;
+  }
+  .contactForm .contactContent form input[type=button] {
+    background-color: #1e150b;
+  }
+  /* ============================== FOOTER ============================== */
+  footer {
+    height: 80px;
+    background-color: #1e150b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .foot p {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
 }/*# sourceMappingURL=style.css.map */
