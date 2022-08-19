@@ -138,21 +138,24 @@ header {
   position: relative;
 }
 .about .aboutContent {
-  position: absolute;
-  top: 20px;
-  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  width: 80%;
+  margin: 0 auto;
 }
 .about .aboutContent h2 {
   color: #1e150b;
-  margin: 20px 0;
   font-size: 1.5rem;
+  padding-top: 50px;
 }
 .about .aboutContent p {
   color: #1e150b;
   font-size: 0.8rem;
-  width: 80%;
-  margin: 0 auto;
   line-height: 22px;
+  text-align: center;
 }
 .about .aboutCircle {
   height: 70%;
@@ -167,71 +170,74 @@ header {
 /* ============================== OFFRES ============================== */
 .offres {
   background-color: rgba(146, 104, 71, 0.5019607843);
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  gap: 20px;
 }
 .offres .offresTitre h2 {
   font-size: 1.5rem;
+  text-align: center;
   color: #1e150b;
-  margin-top: 50px;
+  padding-top: 50px;
+  margin-bottom: 25px;
 }
-.offres .offresSolo,
-.offres .offresDuo,
-.offres .offresStudio {
+.offres .offresContent {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  justify-content: center;
+}
+.offres .offresContent .offresSolo,
+.offres .offresContent .offresDuo,
+.offres .offresContent .offresStudio {
+  display: flex;
+  flex-flow: column wrap;
   text-align: center;
   border: 2px solid #a43820;
   height: auto;
-  width: 250px;
-  border-radius: 15px;
+  width: 80%;
   margin-bottom: 20px;
+  border-radius: 15px;
   background-color: #1e150b;
   box-shadow: 2px 2px 5px 0px #1e150b;
 }
-.offres .offresSolo h3,
-.offres .offresDuo h3,
-.offres .offresStudio h3 {
+.offres .offresContent .offresSolo h3,
+.offres .offresContent .offresDuo h3,
+.offres .offresContent .offresStudio h3 {
   font-size: 1rem;
   margin: 10px 0;
 }
-.offres .offresSolo img,
-.offres .offresDuo img,
-.offres .offresStudio img {
-  height: 300px;
-  width: 220px;
+.offres .offresContent .offresSolo img,
+.offres .offresContent .offresDuo img,
+.offres .offresContent .offresStudio img {
+  height: auto;
+  width: 80%;
   margin: 0 auto;
 }
-.offres .offresSolo p,
-.offres .offresDuo p,
-.offres .offresStudio p {
+.offres .offresContent .offresSolo p,
+.offres .offresContent .offresDuo p,
+.offres .offresContent .offresStudio p {
   font-size: 0.8rem;
   line-height: 24px;
   margin: 10px 0;
   padding: 0 5px;
 }
-.offres .offresSolo a,
-.offres .offresDuo a,
-.offres .offresStudio a {
+.offres .offresContent .offresSolo a,
+.offres .offresContent .offresDuo a,
+.offres .offresContent .offresStudio a {
   color: rgba(255, 255, 255, 0.9);
   border: 2px solid #a43820;
   border-radius: 15px;
   text-decoration: none;
-  width: 120px;
+  width: 50%;
   padding: 2px;
   margin: 15px auto;
 }
 
 /* ============================== CONTACT ============================== */
-.contactForm {
+.contact {
   height: 550px;
   background-color: #e8e7e0;
   position: relative;
 }
-.contactForm .contactCircle {
+.contact .contactCircle {
   height: 70%;
   width: 100%;
   position: absolute;
@@ -240,41 +246,51 @@ header {
   opacity: 0.4;
   border-radius: 0 0 0 500px;
 }
-.contactForm .contactContent {
-  position: absolute;
-  top: 20px;
+.contact .contactContent {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
-.contactForm .contactContent h2 {
+.contact .contactContent h2 {
   color: #1e150b;
-  margin: 20px 0;
   font-size: 1.5rem;
+  padding-top: 50px;
+  margin-bottom: 25px;
 }
-.contactForm .contactContent p {
+.contact .contactContent p {
   color: #1e150b;
   font-size: 0.8rem;
-  padding: 0 30px;
   line-height: 22px;
+  text-align: center;
 }
-.contactForm .contactContent form {
+.contact .contactContent .contactForm {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   gap: 25px;
+  z-index: 15;
 }
-.contactForm .contactContent form input,
-.contactForm .contactContent form textarea {
+.contact .contactContent .contactForm input,
+.contact .contactContent .contactForm textarea {
+  font-size: 0.8rem;
   border: 2px solid #a43820;
   border-radius: 8px;
   padding: 3px 5px;
   background-color: rgba(255, 255, 255, 0.9);
+  color: #1e150b;
 }
-.contactForm .contactContent form input:focus,
-.contactForm .contactContent form textarea:focus {
+.contact .contactContent .contactForm input:focus,
+.contact .contactContent .contactForm textarea:focus {
   outline-color: #1e150b;
 }
-.contactForm .contactContent form input[type=button] {
+.contact .contactContent .contactForm input[type=button] {
   background-color: #1e150b;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ============================== FOOTER ============================== */
@@ -339,130 +355,104 @@ footer .foot p {
     font-size: 0.8rem;
   }
   /* ============================== ABOUT ============================== */
-  .about {
-    height: 400px;
-    background-color: #e8e7e0;
-    position: relative;
-  }
   .about .aboutContent h2 {
     font-size: 2rem;
   }
   .about .aboutContent p {
     font-size: 1rem;
-    line-height: 30px;
+    line-height: 25px;
   }
   /* ============================== OFFRES ============================== */
   .offres .offresTitre h2 {
     font-size: 2rem;
+    margin-bottom: 35px;
   }
-  .offres .offresSolo,
-.offres .offresDuo,
-.offres .offresStudio {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #a43820;
-    height: auto;
-    width: 300px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    background-color: #1e150b;
-    box-shadow: 2px 2px 5px 0px #1e150b;
+  .offres .offresContent .offresSolo h3,
+.offres .offresContent .offresDuo h3,
+.offres .offresContent .offresStudio h3 {
+    font-size: 1.2rem;
+    margin: 15px 0;
   }
-  .offres .offresSolo h3,
-.offres .offresDuo h3,
-.offres .offresStudio h3 {
+  .offres .offresContent .offresSolo p,
+.offres .offresContent .offresDuo p,
+.offres .offresContent .offresStudio p {
     font-size: 1rem;
-    margin: 10px 0;
+    padding: 0 10px;
   }
-  .offres .offresSolo img,
-.offres .offresDuo img,
-.offres .offresStudio img {
-    height: 300px;
-    width: 220px;
-    margin: 0 auto;
-  }
-  .offres .offresSolo p,
-.offres .offresDuo p,
-.offres .offresStudio p {
-    font-size: 0.8rem;
-    line-height: 24px;
-    margin: 10px 0;
-    padding: 0 5px;
-  }
-  .offres .offresSolo a,
-.offres .offresDuo a,
-.offres .offresStudio a {
-    color: rgba(255, 255, 255, 0.9);
-    border: 2px solid #a43820;
-    border-radius: 15px;
-    text-decoration: none;
-    width: 120px;
-    padding: 2px;
-    margin: 15px auto;
+  .offres .offresContent .offresSolo a,
+.offres .offresContent .offresDuo a,
+.offres .offresContent .offresStudio a {
+    padding: 4px;
   }
   /* ============================== CONTACT ============================== */
-  .contactForm {
-    height: 550px;
-    background-color: #e8e7e0;
-    position: relative;
+  .contact {
+    height: 600px;
   }
-  .contactForm .contactCircle {
-    height: 70%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background-color: #926747;
-    opacity: 0.4;
-    border-radius: 0 0 0 500px;
+  .contact .contactContent h2 {
+    font-size: 2rem;
   }
-  .contactForm .contactContent {
-    position: absolute;
-    top: 20px;
-    text-align: center;
+  .contact .contactContent p {
+    font-size: 1rem;
+    line-height: 25px;
   }
-  .contactForm .contactContent h2 {
-    color: #1e150b;
-    margin: 20px 0;
-    font-size: 1.5rem;
+  .contact .contactContent .contactForm {
+    gap: 30px;
   }
-  .contactForm .contactContent p {
-    color: #1e150b;
-    font-size: 0.8rem;
-    padding: 0 30px;
-    line-height: 22px;
-  }
-  .contactForm .contactContent form {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    gap: 25px;
-  }
-  .contactForm .contactContent form input,
-.contactForm .contactContent form textarea {
-    border: 2px solid #a43820;
-    border-radius: 8px;
-    padding: 3px 5px;
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-  .contactForm .contactContent form input:focus,
-.contactForm .contactContent form textarea:focus {
-    outline-color: #1e150b;
-  }
-  .contactForm .contactContent form input[type=button] {
-    background-color: #1e150b;
+  .contact .contactContent .contactForm input,
+.contact .contactContent .contactForm textarea {
+    font-size: 1rem;
   }
   /* ============================== FOOTER ============================== */
-  footer {
-    height: 80px;
-    background-color: #1e150b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   footer .foot p {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+  }
+}
+/* ==================================================== 600px ==================================================== */
+@media screen and (min-width: 600px) {
+  /* ============================== OFFRES ============================== */
+  .offres .offresContent {
+    gap: 35px;
+  }
+  .offres .offresContent .offresSolo h3,
+.offres .offresContent .offresDuo h3,
+.offres .offresContent .offresStudio h3 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  .offres .offresContent .offresSolo img,
+.offres .offresContent .offresDuo img,
+.offres .offresContent .offresStudio img {
+    width: 65%;
+  }
+  .offres .offresContent .offresSolo p,
+.offres .offresContent .offresDuo p,
+.offres .offresContent .offresStudio p {
+    padding: 0 15px;
+  }
+  /* ============================== CONTACT ============================== */
+  .contact {
+    height: 600px;
+  }
+  .contact .contactContent h2 {
+    font-size: 2rem;
+  }
+  .contact .contactContent p {
+    font-size: 1rem;
+    line-height: 25px;
+  }
+  .contact .contactContent .contactForm {
+    gap: 30px;
+  }
+  .contact .contactContent .contactForm input,
+.contact .contactContent .contactForm textarea {
+    font-size: 1rem;
+    width: 300px;
+  }
+  .contact .contactContent .contactForm input[type=button] {
+    width: 35%;
+  }
+  /* ============================== FOOTER ============================== */
+  footer .foot p {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
