@@ -12,7 +12,7 @@ body {
 }
 
 /* ============================== NAVBAR ============================== */
-nav #hamBurger {
+.nav #hamBurger {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -26,7 +26,7 @@ nav #hamBurger {
   cursor: pointer;
   z-index: 10;
 }
-nav #hamBurger::before {
+.nav #hamBurger::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -35,14 +35,14 @@ nav #hamBurger::before {
   transform: translateY(-5px);
   transition: 0.2s;
 }
-nav #hamBurger span {
+.nav #hamBurger span {
   content: "";
   position: absolute;
   width: 20px;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.9);
 }
-nav #hamBurger::after {
+.nav #hamBurger::after {
   content: "";
   position: absolute;
   width: 20px;
@@ -51,16 +51,16 @@ nav #hamBurger::after {
   transform: translateY(5px);
   transition: 0.2s;
 }
-nav #hamBurger.active::before {
+.nav #hamBurger.active::before {
   transform: translateY(0px) rotate(45deg);
 }
-nav #hamBurger.active span {
+.nav #hamBurger.active span {
   display: none;
 }
-nav #hamBurger.active::after {
+.nav #hamBurger.active::after {
   transform: translateY(0px) rotate(-45deg);
 }
-nav #navBar {
+.nav #navBar {
   position: absolute;
   height: 55vh;
   width: 35%;
@@ -71,7 +71,7 @@ nav #navBar {
   z-index: 9;
   border-bottom-right-radius: 750px;
 }
-nav #navBar .navLinks {
+.nav #navBar .navLinks {
   height: 100%;
   display: flex;
   flex-flow: column;
@@ -79,18 +79,20 @@ nav #navBar .navLinks {
   justify-content: center;
   gap: 60px;
 }
-nav #navBar .navLinks a {
+.nav #navBar .navLinks a {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   font-size: 0.6rem;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 1px #a43820;
 }
-nav #navBar .navLinks a img {
-  height: 40px;
+.nav #navBar .navLinks a i {
+  color: #a43820;
+  font-size: 2.5rem;
 }
-nav #navBar.active {
+.nav #navBar.active {
   position: absolute;
   left: 0;
   transition: all 0.5s ease;
@@ -119,16 +121,19 @@ header {
 }
 .headerContent .headerLinks {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   justify-content: end;
 }
-.headerContent .headerLinks img {
-  height: 20px;
-}
 .headerContent .headerLinks a {
+  background-color: transparent;
+  border: 1px solid #a43820;
+  padding: 0 8px;
   font-size: 0.6rem;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+}
+.headerContent .headerLinks i {
+  color: #a43820;
+  margin: 0;
 }
 
 /* ============================== ABOUT ============================== */
@@ -138,27 +143,20 @@ header {
   position: relative;
 }
 .about .aboutContent {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  width: 80%;
-  margin: 0 auto;
+  text-align: center;
 }
 .about .aboutContent h2 {
   color: #1e150b;
   font-size: 1.5rem;
-  padding-top: 50px;
+  margin-top: 50px;
 }
 .about .aboutContent p {
   color: #1e150b;
   font-size: 0.8rem;
   line-height: 22px;
-  text-align: center;
 }
 .about .aboutCircle {
-  height: 70%;
+  height: 50%;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -175,60 +173,7 @@ header {
   font-size: 1.5rem;
   text-align: center;
   color: #1e150b;
-  padding-top: 50px;
-  margin-bottom: 25px;
-}
-.offres .offresContent {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-}
-.offres .offresContent .offresSolo,
-.offres .offresContent .offresDuo,
-.offres .offresContent .offresStudio {
-  display: flex;
-  flex-flow: column wrap;
-  text-align: center;
-  border: 2px solid #a43820;
-  height: auto;
-  width: 80%;
-  margin-bottom: 20px;
-  border-radius: 15px;
-  background-color: #1e150b;
-  box-shadow: 2px 2px 5px 0px #1e150b;
-}
-.offres .offresContent .offresSolo h3,
-.offres .offresContent .offresDuo h3,
-.offres .offresContent .offresStudio h3 {
-  font-size: 1rem;
-  margin: 10px 0;
-}
-.offres .offresContent .offresSolo img,
-.offres .offresContent .offresDuo img,
-.offres .offresContent .offresStudio img {
-  height: auto;
-  width: 80%;
-  margin: 0 auto;
-}
-.offres .offresContent .offresSolo p,
-.offres .offresContent .offresDuo p,
-.offres .offresContent .offresStudio p {
-  font-size: 0.8rem;
-  line-height: 24px;
-  margin: 10px 0;
-  padding: 0 5px;
-}
-.offres .offresContent .offresSolo a,
-.offres .offresContent .offresDuo a,
-.offres .offresContent .offresStudio a {
-  color: rgba(255, 255, 255, 0.9);
-  border: 2px solid #a43820;
-  border-radius: 15px;
-  text-decoration: none;
-  width: 50%;
-  padding: 2px;
-  margin: 15px auto;
+  margin-top: 50px;
 }
 
 /* ============================== CONTACT ============================== */

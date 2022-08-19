@@ -20,13 +20,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Merienda:wght@400;700&display=swap"
     rel="stylesheet">
 
-  <!-- ====================== BS & JS & CSS ====================== -->
+  <!-- ====================== Framework & JS & CSS ====================== -->
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script defer src="/script.js"></script>
-
   <link rel="stylesheet" href="/style.css" />
 </head>
 
@@ -34,21 +33,21 @@
 
   <!-- ======================== NAVBAR ======================== -->
 
-  <nav>
+  <div class="nav">
     <div id="hamBurger">
       <span></span>
     </div>
     <div id="navBar">
       <div class="navLinks">
         <a href="#">
-          <img src="/assets/icons/navBar/accueilIcon.png" alt="">Accueil</a>
+          <i class="material-icons">home</i>Accueil</a>
         <a href="#">
-          <img src="/assets/icons/navBar/boutiqueIcon.png" alt="">Nos offres</a>
+          <i class="material-icons">camera_alt</i>Nos offres</a>
         <a href="#">
-          <img src="/assets/icons/navBar/emailIcon.png" alt="">Nous contacter</a>
+          <i class="material-icons">contact_mail</i>Nous contacter</a>
       </div>
     </div>
-  </nav>
+  </div>
 
   <!-- ======================== HEADER ======================== -->
 
@@ -59,12 +58,10 @@
       </div>
       <div class="headerLinks">
         <div class="headerOffres">
-          <img src="/assets/icons/headerIcons/chevronIcons_00.png" alt="chevron">
-          <a href="">Nos offres</a>
+          <a class="waves-effect waves-light btn"><i class="material-icons left">chevron_right</i>Nos offres</a>
         </div>
         <div class="headerContact">
-          <img src="/assets/icons/headerIcons/chevronIcons_00.png" alt="chevron">
-          <a href="">Nous contacter</a>
+          <a class="waves-effect waves-light btn"><i class="material-icons left">chevron_right</i>Nous contacter</a>
         </div>
       </div>
     </div>
@@ -73,45 +70,94 @@
   <!-- ======================== ABOUT ======================== -->
 
   <div class="about">
-    <div class="aboutCircle">
+    <div class="container aboutContent">
+      <div class="row">
+        <div class="col s12">
+          <h2>A-PROPOS</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati quidem modi repudiandae? Nihil facere
+            enim
+            qui atque, aliquid neque suscipit obcaecati asperiores tempore iusto nobis ab unde explicabo, ad quam
+            consectetur
+            incidunt cupiditate accusamus deserunt, totam debitis dolorem mollitia. Dolore maiores harum tenetur itaque
+            nesciunt accusantium fuga eos possimus culpa.</p>
+        </div>
+      </div>
     </div>
-    <div class="aboutContent">
-      <h2>A-PROPOS</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati quidem modi repudiandae? Nihil facere enim
-        qui atque, aliquid neque suscipit obcaecati asperiores tempore iusto nobis ab unde explicabo, ad quam
-        consectetur
-        incidunt cupiditate accusamus deserunt, totam debitis dolorem mollitia. Dolore maiores harum tenetur itaque
-        nesciunt accusantium fuga eos possimus culpa.</p>
+    <div class="aboutCircle">
     </div>
   </div>
 
   <!-- ======================== OFFRES ======================== -->
 
   <div class="offres">
-    <div class="offresTitre">
-      <h2>NOS OFFRES</h2>
-    </div>
-    <div class="offresContent">
-      <div class="offresSolo">
-        <h3>Formule Solo</h3>
-        <img src="/assets/images/category/mode_category.jpg" alt="formule_solo">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, quisquam? Optio ad quod consequatur quam?
-        </p>
-        <a href="">À partir de 49€ TTC</a>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="offresTitre">
+            <h2>NOS OFFRES</h2>
+          </div>
+        </div>
       </div>
-      <div class="offresDuo">
-        <h3>Formule Duo</h3>
-        <img src="/assets/images/category/duo_category.jpg" alt="formule_duo">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, quisquam? Optio ad quod consequatur quam?
-        </p>
-        <a href="">À partir de 69€ TTC</a>
-      </div>
-      <div class="offresStudio">
-        <h3>Formule Studio</h3>
-        <img src="/assets/images/category/studio_category.jpg" alt="formule_studio">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, quisquam? Optio ad quod consequatur quam?
-        </p>
-        <a href="">À partir de 59€ TTC</a>
+      <div class="row">
+        <div class="col s12">
+          <div class="offresContent">
+            <div class="row">
+              <div class="col s12 m7">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="/assets/images/category/mode_category.jpg">
+                    <span class="card-title">Formule solo</span>
+                  </div>
+                  <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                      I am convenient because I require little markup to use effectively.</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">À partir de 49€ TTC</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m7">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="/assets/images/category/duo_category.jpg">
+                    <span class="card-title">Formule duo</span>
+                  </div>
+                  <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                      I am convenient because I require little markup to use effectively.</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">À partir de 79€ TTC</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m7">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="/assets/images/category/studio_category.jpg">
+                    <span class="card-title">Formule studio</span>
+                  </div>
+                  <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                      I am convenient because I require little markup to use effectively.</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">À partir de 59€ TTC</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

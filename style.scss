@@ -16,7 +16,7 @@ body {
 
 /* ============================== NAVBAR ============================== */
 
-nav {
+.nav {
   #hamBurger {
     position: absolute;
     top: 15px;
@@ -98,9 +98,11 @@ nav {
         font-size: 0.6rem;
         text-decoration: none;
         color: $colorTexte;
+        text-shadow: 1px 1px 1px $colorSecond;
 
-        img {
-          height: 40px;
+        i {
+          color: $colorSecond;
+          font-size: 2.5rem;
         }
       }
     }
@@ -137,17 +139,20 @@ header {
 
   .headerLinks {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     justify-content: end;
 
-    img {
-      height: 20px;
+    a {
+      background-color: transparent;
+      border: 1px solid $colorSecond;
+      padding: 0 8px;
+      font-size: 0.6rem;
+      border-radius: 12px;
     }
 
-    a {
-      font-size: 0.6rem;
-      text-decoration: none;
-      color: $colorTexte;
+    i {
+      color: $colorSecond;
+      margin: 0;
     }
   }
 }
@@ -156,33 +161,28 @@ header {
 
 .about {
   height: 400px;
+  // =====================================================================================================
   background-color: $colorBackground_white;
   position: relative;
 
   .aboutContent {
-    display: flex;
-    flex-flow: column wrap;
-    @include flexCenter;
-    gap: 25px;
-    width: 80%;
-    margin: 0 auto;
+    text-align: center;
 
     h2 {
       color: $colorBackground_dark;
       font-size: 1.5rem;
-      padding-top: 50px;
+      margin-top: 50px;
     }
 
     p {
       color: $colorBackground_dark;
       font-size: 0.8rem;
       line-height: 22px;
-      text-align: center;
     }
   }
 
   .aboutCircle {
-    height: 70%;
+    height: 50%;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -201,58 +201,7 @@ header {
     font-size: 1.5rem;
     text-align: center;
     color: $colorBackground_dark;
-    padding-top: 50px;
-    margin-bottom: 25px;
-  }
-
-  .offresContent {
-    display: flex;
-    flex-flow: column wrap;
-    @include flexCenter;
-
-    .offresSolo,
-    .offresDuo,
-    .offresStudio {
-      display: flex;
-      flex-flow: column wrap;
-      text-align: center;
-      border: 2px solid $colorSecond;
-      height: auto;
-      width: 80%;
-      margin-bottom: 20px;
-      border-radius: 15px;
-
-      background-color: $colorBackground_dark;
-      box-shadow: 2px 2px 5px 0px $colorBackground_dark;
-
-      h3 {
-        font-size: 1rem;
-        margin: 10px 0;
-      }
-
-      img {
-        height: auto;
-        width: 80%;
-        margin: 0 auto;
-      }
-
-      p {
-        font-size: 0.8rem;
-        line-height: 24px;
-        margin: 10px 0;
-        padding: 0 5px;
-      }
-
-      a {
-        color: $colorTexte;
-        border: 2px solid $colorSecond;
-        border-radius: 15px;
-        text-decoration: none;
-        width: 50%;
-        padding: 2px;
-        margin: 15px auto;
-      }
-    }
+    margin-top: 50px;
   }
 }
 
