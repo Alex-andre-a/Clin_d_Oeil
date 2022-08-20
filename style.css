@@ -11,6 +11,15 @@ body {
   width: 100%;
 }
 
+h2,
+p {
+  color: #1e150b;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
 /* ============================== NAVBAR ============================== */
 .nav #hamBurger {
   position: absolute;
@@ -118,6 +127,7 @@ header {
   font-size: 3rem;
   font-family: "Merienda One", "Cursive";
   text-shadow: 1px 1px 5px #a43820;
+  margin: 0;
 }
 .headerContent .headerLinks {
   display: flex;
@@ -126,7 +136,8 @@ header {
 }
 .headerContent .headerLinks a {
   background-color: transparent;
-  border: 1px solid #a43820;
+  border: none;
+  box-shadow: none;
   padding: 0 8px;
   font-size: 0.6rem;
   border-radius: 12px;
@@ -138,7 +149,6 @@ header {
 
 /* ============================== ABOUT ============================== */
 .about {
-  height: 400px;
   background-color: #e8e7e0;
   position: relative;
 }
@@ -146,17 +156,22 @@ header {
   text-align: center;
 }
 .about .aboutContent h2 {
-  color: #1e150b;
   font-size: 1.5rem;
   margin-top: 50px;
 }
 .about .aboutContent p {
-  color: #1e150b;
   font-size: 0.8rem;
   line-height: 22px;
+  margin-bottom: 25px;
+}
+.about .aboutContent .aboutSocial a {
+  margin: 0 10px;
+}
+.about .aboutContent .aboutSocial img {
+  width: 30px;
 }
 .about .aboutCircle {
-  height: 50%;
+  height: 90%;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -168,74 +183,95 @@ header {
 /* ============================== OFFRES ============================== */
 .offres {
   background-color: rgba(146, 104, 71, 0.5019607843);
+  text-align: center;
+  padding-bottom: 25px;
 }
 .offres .offresTitre h2 {
   font-size: 1.5rem;
-  text-align: center;
-  color: #1e150b;
   margin-top: 50px;
+}
+.offres .offresContent {
+  display: flex;
+  flex-flow: column wrap;
+}
+.offres .offresContent .card {
+  border-radius: 15px;
+  background-color: #1e150b;
+}
+.offres .offresContent .card-image {
+  padding: 20px;
+}
+.offres .offresContent .card-content {
+  padding: 0;
+  padding-bottom: 15px;
+}
+.offres .offresContent .card-content p {
+  color: #a43820;
+  font-size: 1rem;
+}
+.offres .offresContent .card-action {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.offres .offresContent .card-action p {
+  font-size: 1.1rem;
+  color: #a43820;
 }
 
 /* ============================== CONTACT ============================== */
 .contact {
-  height: 550px;
   background-color: #e8e7e0;
   position: relative;
+  text-align: center;
 }
 .contact .contactCircle {
-  height: 70%;
+  height: 0%;
   width: 100%;
   position: absolute;
-  top: 0;
+  top: 0px;
   background-color: #926747;
   opacity: 0.4;
   border-radius: 0 0 0 500px;
 }
 .contact .contactContent {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 25px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
+  padding-bottom: 25px;
 }
-.contact .contactContent h2 {
-  color: #1e150b;
+.contact .contactContent .contactTitre h2 {
   font-size: 1.5rem;
-  padding-top: 50px;
-  margin-bottom: 25px;
+  margin-top: 50px;
 }
-.contact .contactContent p {
-  color: #1e150b;
+.contact .contactContent .contactTexte p {
   font-size: 0.8rem;
   line-height: 22px;
-  text-align: center;
+  margin-bottom: 25px;
 }
-.contact .contactContent .contactForm {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  gap: 25px;
-  z-index: 15;
+.contact .contactContent .input-field {
+  margin: 15px 0;
 }
-.contact .contactContent .contactForm input,
-.contact .contactContent .contactForm textarea {
-  font-size: 0.8rem;
-  border: 2px solid #a43820;
-  border-radius: 8px;
-  padding: 3px 5px;
-  background-color: rgba(255, 255, 255, 0.9);
+.contact .contactContent .input-field input[type=text]:focus + label,
+.contact .contactContent .input-field input[type=email]:focus + label,
+.contact .contactContent .input-field textarea:focus + label {
+  color: #a43820;
+}
+.contact .contactContent .input-field input[type=text]:focus,
+.contact .contactContent .input-field input[type=email]:focus,
+.contact .contactContent .input-field textarea:focus {
+  border-bottom: 1px solid #a43820;
+  box-shadow: 0 1px 0 0 #a43820;
+}
+.contact .contactContent .input-field .prefix.active {
+  color: #a43820;
+}
+.contact .contactContent .input-field input,
+.contact .contactContent .input-field textarea {
   color: #1e150b;
+  font-size: 0.8rem;
 }
-.contact .contactContent .contactForm input:focus,
-.contact .contactContent .contactForm textarea:focus {
-  outline-color: #1e150b;
+.contact .contactContent .input-field label {
+  font-size: 0.8rem;
 }
-.contact .contactContent .contactForm input[type=button] {
-  background-color: #1e150b;
-  color: rgba(255, 255, 255, 0.9);
+.contact .contactContent .input-field i {
+  color: #1e150b;
 }
 
 /* ============================== FOOTER ============================== */
