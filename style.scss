@@ -84,18 +84,21 @@ p {
   #navBar {
     position: absolute;
     height: 55vh;
-    width: 35%;
+    width: 90px;
     background-color: $colorBackground_dark;
     top: -25px;
     left: -50%;
     transition: all 1s ease;
     z-index: 9;
     border-bottom-right-radius: 750px;
+    border-right: 1px solid $colorSecond;
+    border-bottom: 1px solid $colorSecond;
 
     .navLinks {
       height: 100%;
       display: flex;
       flex-flow: column;
+      text-align: center;
       align-items: center;
       justify-content: center;
       gap: 60px;
@@ -179,7 +182,13 @@ header {
 
     h2 {
       font-size: 1.5rem;
+      margin: 0;
       margin-top: 50px;
+    }
+
+    .separation {
+      @include separation;
+      width: 100px;
     }
 
     p {
@@ -203,8 +212,7 @@ header {
     width: 100%;
     position: absolute;
     bottom: 0;
-    background-color: $colorBackground_brown;
-    opacity: 0.4;
+    background-color: #92684718;
     border-radius: 500px 0 0;
   }
 }
@@ -212,13 +220,20 @@ header {
 /* ============================== OFFRES ============================== */
 
 .offres {
-  background-color: #92684780;
+  background: rgb(224, 219, 210);
   text-align: center;
-  padding-bottom: 25px;
 
-  .offresTitre h2 {
-    font-size: 1.5rem;
-    margin-top: 50px;
+  .offresTitre {
+    h2 {
+      font-size: 1.5rem;
+      margin: 0;
+      margin-top: 50px;
+    }
+
+    .separation {
+      @include separation;
+      width: 130px;
+    }
   }
 
   .offresContent {
@@ -228,6 +243,9 @@ header {
     .card {
       border-radius: 15px;
       background-color: $colorBackground_dark;
+      border: 2px solid $colorSecond;
+      box-shadow: 1px 1px 10px 0px $colorBackground_dark;
+      margin: 25px 0;
     }
 
     .card-image {
@@ -239,7 +257,7 @@ header {
       padding-bottom: 15px;
 
       p {
-        color: $colorSecond;
+        color: $colorTexte;
         font-size: 1rem;
       }
     }
@@ -250,7 +268,7 @@ header {
 
       p {
         font-size: 1.1rem;
-        color: $colorSecond;
+        color: $colorTexte;
       }
     }
   }
@@ -264,21 +282,28 @@ header {
   text-align: center;
 
   .contactCircle {
-    height: 0%;
+    height: 70%;
     width: 100%;
     position: absolute;
     top: 0px;
-    background-color: $colorBackground_brown;
-    opacity: 0.4;
+    background-color: #92684718;
     border-radius: 0 0 0 500px;
   }
 
   .contactContent {
     padding-bottom: 25px;
 
-    .contactTitre h2 {
-      font-size: 1.5rem;
-      margin-top: 50px;
+    .contactTitre {
+      h2 {
+        font-size: 1.5rem;
+        margin: 0;
+        margin-top: 50px;
+      }
+
+      .separation {
+        @include separation;
+        width: 190px;
+      }
     }
 
     .contactTexte p {
@@ -321,63 +346,59 @@ header {
         color: $colorBackground_dark;
       }
     }
-    // ====================================== BOUTON FORMULAIRE
+
+    .btnForm {
+      background-color: $colorBackground_dark;
+      border: 2px solid $colorSecond;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      margin-top: 25px;
+    }
   }
 }
 
 /* ============================== FOOTER ============================== */
 
 footer {
-  height: 80px;
+  height: 60px;
   background-color: $colorBackground_dark;
   display: flex;
   @include flexCenter;
 
-  .foot p {
-    font-size: 0.8rem;
-    color: $colorTexte;
+  .footer-copyright {
+    p {
+      font-size: 0.8rem;
+      color: $colorTexte;
+    }
   }
 }
 
 /* ==================================================== RESPONSIVE ==================================================== */
 
-/* ============================== 426px ============================== */
+/* ============================================= 426px ============================================= */
 
 @media screen and (min-width: 426px) {
   /* ============================== NAVBAR ============================== */
 
-  nav {
+  .nav {
     #hamBurger {
       width: 40px;
       height: 40px;
-      border-radius: 50px;
-
-      &::before {
-        width: 25px;
-        height: 2px;
-      }
-
-      span {
-        width: 25px;
-        height: 2px;
-      }
-
-      &::after {
-        width: 25px;
-        height: 2px;
-      }
+      border-radius: 25px;
     }
 
     #navBar {
       height: 60vh;
-      width: 20%;
+      width: 100px;
 
       .navLinks {
+        gap: 40px;
+
         a {
           font-size: 0.8rem;
 
-          img {
-            height: 45px;
+          i {
+            font-size: 3rem;
           }
         }
       }
@@ -387,22 +408,17 @@ footer {
   /* ============================== HEADER ============================== */
 
   .headerContent {
-    top: 60%;
-    right: 5%;
-
     .headerTitre h1 {
       font-size: 4rem;
     }
 
     .headerLinks {
-      gap: 25px;
-
-      img {
-        height: 30px;
-      }
-
       a {
         font-size: 0.8rem;
+      }
+
+      i {
+        font-size: 2rem;
       }
     }
   }
@@ -413,102 +429,64 @@ footer {
     .aboutContent {
       h2 {
         font-size: 2rem;
+        margin-top: 80px;
+      }
+
+      .separation {
+        width: 130px;
       }
 
       p {
         font-size: 1rem;
-        line-height: 25px;
+        line-height: 30px;
+        margin-top: 20px;
+        margin-bottom: 50px;
       }
-    }
-  }
 
-  /* ============================== OFFRES ============================== */
-
-  .offres {
-    .offresTitre h2 {
-      font-size: 2rem;
-      margin-bottom: 35px;
-    }
-
-    .offresContent {
-      .offresSolo,
-      .offresDuo,
-      .offresStudio {
-        h3 {
-          font-size: 1.2rem;
-          margin: 15px 0;
-        }
-
-        p {
-          font-size: 1rem;
-          padding: 0 10px;
-        }
-
+      .aboutSocial {
         a {
-          padding: 4px;
+          margin: 0 15px;
+        }
+        img {
+          width: 35px;
+          margin-bottom: 50px;
         }
       }
     }
   }
 
-  /* ============================== CONTACT ============================== */
-
-  .contact {
-    height: 600px;
-
-    .contactContent {
-      h2 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-        line-height: 25px;
-      }
-
-      .contactForm {
-        gap: 30px;
-
-        input,
-        textarea {
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-
-  /* ============================== FOOTER ============================== */
-
-  footer {
-    .foot p {
-      font-size: 1rem;
-    }
-  }
-}
-
-/* ==================================================== 600px ==================================================== */
-
-@media screen and (min-width: 600px) {
   /* ============================== OFFRES ============================== */
 
   .offres {
+    .offresTitre {
+      h2 {
+        font-size: 2rem;
+        margin-top: 80px;
+      }
+
+      .separation {
+        width: 160px;
+      }
+    }
+
     .offresContent {
-      gap: 35px;
+      .card {
+        margin: 20px 0;
+      }
 
-      .offresSolo,
-      .offresDuo,
-      .offresStudio {
-        h3 {
-          font-size: 1.5rem;
-          margin: 20px 0;
-        }
+      .card-image {
+        padding: 30px;
+      }
 
-        img {
-          width: 65%;
-        }
-
+      .card-content {
         p {
-          padding: 0 15px;
+          font-size: 1.5rem;
+        }
+      }
+
+      .card-action {
+        p {
+          font-size: 1.5rem;
         }
       }
     }
@@ -517,30 +495,45 @@ footer {
   /* ============================== CONTACT ============================== */
 
   .contact {
-    height: 600px;
-
     .contactContent {
-      h2 {
-        font-size: 2rem;
+      padding-bottom: 50px;
+
+      .contactTitre {
+        h2 {
+          font-size: 2rem;
+          margin-top: 80px;
+        }
+
+        .separation {
+          width: 240px;
+        }
       }
 
-      p {
+      .contactTexte p {
         font-size: 1rem;
         line-height: 25px;
+        margin-bottom: 50px;
       }
 
-      .contactForm {
-        gap: 30px;
+      .input-field {
+        margin: 25px 0;
 
         input,
         textarea {
           font-size: 1rem;
-          width: 300px;
         }
 
-        input[type="button"] {
-          width: 35%;
+        label {
+          font-size: 1rem;
         }
+
+        i {
+          font-size: 2.2rem;
+        }
+      }
+
+      .btnForm {
+        font-size: 1rem;
       }
     }
   }
@@ -548,8 +541,14 @@ footer {
   /* ============================== FOOTER ============================== */
 
   footer {
-    .foot p {
-      font-size: 1rem;
+    height: 80px;
+
+    .footer-copyright {
+      p {
+        font-size: 1rem;
+      }
     }
   }
 }
+
+// PROCHAINE CASSE A 600px

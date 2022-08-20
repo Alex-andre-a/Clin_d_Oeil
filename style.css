@@ -72,18 +72,21 @@ p {
 .nav #navBar {
   position: absolute;
   height: 55vh;
-  width: 35%;
+  width: 90px;
   background-color: #1e150b;
   top: -25px;
   left: -50%;
   transition: all 1s ease;
   z-index: 9;
   border-bottom-right-radius: 750px;
+  border-right: 1px solid #a43820;
+  border-bottom: 1px solid #a43820;
 }
 .nav #navBar .navLinks {
   height: 100%;
   display: flex;
   flex-flow: column;
+  text-align: center;
   align-items: center;
   justify-content: center;
   gap: 60px;
@@ -157,7 +160,17 @@ header {
 }
 .about .aboutContent h2 {
   font-size: 1.5rem;
+  margin: 0;
   margin-top: 50px;
+}
+.about .aboutContent .separation {
+  height: 1px;
+  border: 1px solid #1e150b;
+  border-radius: 5px;
+  opacity: 0.4;
+  margin: 5px auto;
+  margin-bottom: 25px;
+  width: 100px;
 }
 .about .aboutContent p {
   font-size: 0.8rem;
@@ -175,20 +188,28 @@ header {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #926747;
-  opacity: 0.4;
+  background-color: rgba(146, 104, 71, 0.0941176471);
   border-radius: 500px 0 0;
 }
 
 /* ============================== OFFRES ============================== */
 .offres {
-  background-color: rgba(146, 104, 71, 0.5019607843);
+  background: rgb(224, 219, 210);
   text-align: center;
-  padding-bottom: 25px;
 }
 .offres .offresTitre h2 {
   font-size: 1.5rem;
+  margin: 0;
   margin-top: 50px;
+}
+.offres .offresTitre .separation {
+  height: 1px;
+  border: 1px solid #1e150b;
+  border-radius: 5px;
+  opacity: 0.4;
+  margin: 5px auto;
+  margin-bottom: 25px;
+  width: 130px;
 }
 .offres .offresContent {
   display: flex;
@@ -197,6 +218,9 @@ header {
 .offres .offresContent .card {
   border-radius: 15px;
   background-color: #1e150b;
+  border: 2px solid #a43820;
+  box-shadow: 1px 1px 10px 0px #1e150b;
+  margin: 25px 0;
 }
 .offres .offresContent .card-image {
   padding: 20px;
@@ -206,7 +230,7 @@ header {
   padding-bottom: 15px;
 }
 .offres .offresContent .card-content p {
-  color: #a43820;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1rem;
 }
 .offres .offresContent .card-action {
@@ -215,7 +239,7 @@ header {
 }
 .offres .offresContent .card-action p {
   font-size: 1.1rem;
-  color: #a43820;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ============================== CONTACT ============================== */
@@ -225,12 +249,11 @@ header {
   text-align: center;
 }
 .contact .contactCircle {
-  height: 0%;
+  height: 70%;
   width: 100%;
   position: absolute;
   top: 0px;
-  background-color: #926747;
-  opacity: 0.4;
+  background-color: rgba(146, 104, 71, 0.0941176471);
   border-radius: 0 0 0 500px;
 }
 .contact .contactContent {
@@ -238,7 +261,17 @@ header {
 }
 .contact .contactContent .contactTitre h2 {
   font-size: 1.5rem;
+  margin: 0;
   margin-top: 50px;
+}
+.contact .contactContent .contactTitre .separation {
+  height: 1px;
+  border: 1px solid #1e150b;
+  border-radius: 5px;
+  opacity: 0.4;
+  margin: 5px auto;
+  margin-bottom: 25px;
+  width: 190px;
 }
 .contact .contactContent .contactTexte p {
   font-size: 0.8rem;
@@ -273,167 +306,137 @@ header {
 .contact .contactContent .input-field i {
   color: #1e150b;
 }
+.contact .contactContent .btnForm {
+  background-color: #1e150b;
+  border: 2px solid #a43820;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-top: 25px;
+}
 
 /* ============================== FOOTER ============================== */
 footer {
-  height: 80px;
+  height: 60px;
   background-color: #1e150b;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-footer .foot p {
+footer .footer-copyright p {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
 /* ==================================================== RESPONSIVE ==================================================== */
-/* ============================== 426px ============================== */
+/* ============================================= 426px ============================================= */
 @media screen and (min-width: 426px) {
   /* ============================== NAVBAR ============================== */
-  nav #hamBurger {
+  .nav #hamBurger {
     width: 40px;
     height: 40px;
-    border-radius: 50px;
+    border-radius: 25px;
   }
-  nav #hamBurger::before {
-    width: 25px;
-    height: 2px;
-  }
-  nav #hamBurger span {
-    width: 25px;
-    height: 2px;
-  }
-  nav #hamBurger::after {
-    width: 25px;
-    height: 2px;
-  }
-  nav #navBar {
+  .nav #navBar {
     height: 60vh;
-    width: 20%;
+    width: 100px;
   }
-  nav #navBar .navLinks a {
+  .nav #navBar .navLinks {
+    gap: 40px;
+  }
+  .nav #navBar .navLinks a {
     font-size: 0.8rem;
   }
-  nav #navBar .navLinks a img {
-    height: 45px;
+  .nav #navBar .navLinks a i {
+    font-size: 3rem;
   }
   /* ============================== HEADER ============================== */
-  .headerContent {
-    top: 60%;
-    right: 5%;
-  }
   .headerContent .headerTitre h1 {
     font-size: 4rem;
-  }
-  .headerContent .headerLinks {
-    gap: 25px;
-  }
-  .headerContent .headerLinks img {
-    height: 30px;
   }
   .headerContent .headerLinks a {
     font-size: 0.8rem;
   }
+  .headerContent .headerLinks i {
+    font-size: 2rem;
+  }
   /* ============================== ABOUT ============================== */
   .about .aboutContent h2 {
     font-size: 2rem;
+    margin-top: 80px;
+  }
+  .about .aboutContent .separation {
+    width: 130px;
   }
   .about .aboutContent p {
     font-size: 1rem;
-    line-height: 25px;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .about .aboutContent .aboutSocial a {
+    margin: 0 15px;
+  }
+  .about .aboutContent .aboutSocial img {
+    width: 35px;
+    margin-bottom: 50px;
   }
   /* ============================== OFFRES ============================== */
   .offres .offresTitre h2 {
     font-size: 2rem;
-    margin-bottom: 35px;
+    margin-top: 80px;
   }
-  .offres .offresContent .offresSolo h3,
-.offres .offresContent .offresDuo h3,
-.offres .offresContent .offresStudio h3 {
-    font-size: 1.2rem;
-    margin: 15px 0;
+  .offres .offresTitre .separation {
+    width: 160px;
   }
-  .offres .offresContent .offresSolo p,
-.offres .offresContent .offresDuo p,
-.offres .offresContent .offresStudio p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-  .offres .offresContent .offresSolo a,
-.offres .offresContent .offresDuo a,
-.offres .offresContent .offresStudio a {
-    padding: 4px;
-  }
-  /* ============================== CONTACT ============================== */
-  .contact {
-    height: 600px;
-  }
-  .contact .contactContent h2 {
-    font-size: 2rem;
-  }
-  .contact .contactContent p {
-    font-size: 1rem;
-    line-height: 25px;
-  }
-  .contact .contactContent .contactForm {
-    gap: 30px;
-  }
-  .contact .contactContent .contactForm input,
-.contact .contactContent .contactForm textarea {
-    font-size: 1rem;
-  }
-  /* ============================== FOOTER ============================== */
-  footer .foot p {
-    font-size: 1rem;
-  }
-}
-/* ==================================================== 600px ==================================================== */
-@media screen and (min-width: 600px) {
-  /* ============================== OFFRES ============================== */
-  .offres .offresContent {
-    gap: 35px;
-  }
-  .offres .offresContent .offresSolo h3,
-.offres .offresContent .offresDuo h3,
-.offres .offresContent .offresStudio h3 {
-    font-size: 1.5rem;
+  .offres .offresContent .card {
     margin: 20px 0;
   }
-  .offres .offresContent .offresSolo img,
-.offres .offresContent .offresDuo img,
-.offres .offresContent .offresStudio img {
-    width: 65%;
+  .offres .offresContent .card-image {
+    padding: 30px;
   }
-  .offres .offresContent .offresSolo p,
-.offres .offresContent .offresDuo p,
-.offres .offresContent .offresStudio p {
-    padding: 0 15px;
+  .offres .offresContent .card-content p {
+    font-size: 1.5rem;
+  }
+  .offres .offresContent .card-action p {
+    font-size: 1.5rem;
   }
   /* ============================== CONTACT ============================== */
-  .contact {
-    height: 600px;
+  .contact .contactContent {
+    padding-bottom: 50px;
   }
-  .contact .contactContent h2 {
+  .contact .contactContent .contactTitre h2 {
     font-size: 2rem;
+    margin-top: 80px;
   }
-  .contact .contactContent p {
+  .contact .contactContent .contactTitre .separation {
+    width: 240px;
+  }
+  .contact .contactContent .contactTexte p {
     font-size: 1rem;
     line-height: 25px;
+    margin-bottom: 50px;
   }
-  .contact .contactContent .contactForm {
-    gap: 30px;
+  .contact .contactContent .input-field {
+    margin: 25px 0;
   }
-  .contact .contactContent .contactForm input,
-.contact .contactContent .contactForm textarea {
+  .contact .contactContent .input-field input,
+.contact .contactContent .input-field textarea {
     font-size: 1rem;
-    width: 300px;
   }
-  .contact .contactContent .contactForm input[type=button] {
-    width: 35%;
+  .contact .contactContent .input-field label {
+    font-size: 1rem;
+  }
+  .contact .contactContent .input-field i {
+    font-size: 2.2rem;
+  }
+  .contact .contactContent .btnForm {
+    font-size: 1rem;
   }
   /* ============================== FOOTER ============================== */
-  footer .foot p {
+  footer {
+    height: 80px;
+  }
+  footer .footer-copyright p {
     font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
