@@ -198,6 +198,7 @@ header {
     }
 
     .aboutSocial {
+      margin-bottom: 25px;
       a {
         margin: 0 10px;
       }
@@ -252,13 +253,19 @@ header {
       padding: 20px;
     }
 
+    .card-title {
+      color: $colorTexte;
+      font-size: 1rem;
+    }
+
     .card-content {
       padding: 0;
       padding-bottom: 15px;
 
       p {
         color: $colorTexte;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        padding: 0 10px;
       }
     }
 
@@ -267,9 +274,13 @@ header {
       border-bottom-right-radius: 15px;
 
       p {
-        font-size: 1.1rem;
-        color: $colorTexte;
+        font-size: 1rem;
       }
+    }
+    .card
+      .card-action
+      a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+      margin: 0;
     }
   }
 }
@@ -378,177 +389,4 @@ footer {
 /* ============================================= 426px ============================================= */
 
 @media screen and (min-width: 426px) {
-  /* ============================== NAVBAR ============================== */
-
-  .nav {
-    #hamBurger {
-      width: 40px;
-      height: 40px;
-      border-radius: 25px;
-    }
-
-    #navBar {
-      height: 60vh;
-      width: 100px;
-
-      .navLinks {
-        gap: 40px;
-
-        a {
-          font-size: 0.8rem;
-
-          i {
-            font-size: 3rem;
-          }
-        }
-      }
-    }
-  }
-
-  /* ============================== HEADER ============================== */
-
-  .headerContent {
-    .headerTitre h1 {
-      font-size: 4rem;
-    }
-
-    .headerLinks {
-      a {
-        font-size: 0.8rem;
-      }
-
-      i {
-        font-size: 2rem;
-      }
-    }
-  }
-
-  /* ============================== ABOUT ============================== */
-
-  .about {
-    .aboutContent {
-      h2 {
-        font-size: 2rem;
-        margin-top: 80px;
-      }
-
-      .separation {
-        width: 130px;
-      }
-
-      p {
-        font-size: 1rem;
-        line-height: 30px;
-        margin-top: 20px;
-        margin-bottom: 50px;
-      }
-
-      .aboutSocial {
-        a {
-          margin: 0 15px;
-        }
-        img {
-          width: 35px;
-          margin-bottom: 50px;
-        }
-      }
-    }
-  }
-
-  /* ============================== OFFRES ============================== */
-
-  .offres {
-    .offresTitre {
-      h2 {
-        font-size: 2rem;
-        margin-top: 80px;
-      }
-
-      .separation {
-        width: 160px;
-      }
-    }
-
-    .offresContent {
-      .card {
-        margin: 20px 0;
-      }
-
-      .card-image {
-        padding: 30px;
-      }
-
-      .card-content {
-        p {
-          font-size: 1.5rem;
-        }
-      }
-
-      .card-action {
-        p {
-          font-size: 1.5rem;
-        }
-      }
-    }
-  }
-
-  /* ============================== CONTACT ============================== */
-
-  .contact {
-    .contactContent {
-      padding-bottom: 50px;
-
-      .contactTitre {
-        h2 {
-          font-size: 2rem;
-          margin-top: 80px;
-        }
-
-        .separation {
-          width: 240px;
-        }
-      }
-
-      .contactTexte p {
-        font-size: 1rem;
-        line-height: 25px;
-        margin-bottom: 50px;
-      }
-
-      .input-field {
-        margin: 25px 0;
-
-        input,
-        textarea {
-          font-size: 1rem;
-        }
-
-        label {
-          font-size: 1rem;
-        }
-
-        i {
-          font-size: 2.2rem;
-        }
-      }
-
-      .btnForm {
-        font-size: 1rem;
-      }
-    }
-  }
-
-  /* ============================== FOOTER ============================== */
-
-  footer {
-    height: 80px;
-
-    .footer-copyright {
-      p {
-        font-size: 1rem;
-      }
-    }
-  }
 }
-
-// PROCHAINE CASSE A 600px

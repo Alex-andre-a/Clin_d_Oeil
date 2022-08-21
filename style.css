@@ -177,6 +177,9 @@ header {
   line-height: 22px;
   margin-bottom: 25px;
 }
+.about .aboutContent .aboutSocial {
+  margin-bottom: 25px;
+}
 .about .aboutContent .aboutSocial a {
   margin: 0 10px;
 }
@@ -225,21 +228,28 @@ header {
 .offres .offresContent .card-image {
   padding: 20px;
 }
+.offres .offresContent .card-title {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
 .offres .offresContent .card-content {
   padding: 0;
   padding-bottom: 15px;
 }
 .offres .offresContent .card-content p {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1rem;
+  font-size: 0.8rem;
+  padding: 0 10px;
 }
 .offres .offresContent .card-action {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 .offres .offresContent .card-action p {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
+.offres .offresContent .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  margin: 0;
 }
 
 /* ============================== CONTACT ============================== */
@@ -328,115 +338,4 @@ footer .footer-copyright p {
 }
 
 /* ==================================================== RESPONSIVE ==================================================== */
-/* ============================================= 426px ============================================= */
-@media screen and (min-width: 426px) {
-  /* ============================== NAVBAR ============================== */
-  .nav #hamBurger {
-    width: 40px;
-    height: 40px;
-    border-radius: 25px;
-  }
-  .nav #navBar {
-    height: 60vh;
-    width: 100px;
-  }
-  .nav #navBar .navLinks {
-    gap: 40px;
-  }
-  .nav #navBar .navLinks a {
-    font-size: 0.8rem;
-  }
-  .nav #navBar .navLinks a i {
-    font-size: 3rem;
-  }
-  /* ============================== HEADER ============================== */
-  .headerContent .headerTitre h1 {
-    font-size: 4rem;
-  }
-  .headerContent .headerLinks a {
-    font-size: 0.8rem;
-  }
-  .headerContent .headerLinks i {
-    font-size: 2rem;
-  }
-  /* ============================== ABOUT ============================== */
-  .about .aboutContent h2 {
-    font-size: 2rem;
-    margin-top: 80px;
-  }
-  .about .aboutContent .separation {
-    width: 130px;
-  }
-  .about .aboutContent p {
-    font-size: 1rem;
-    line-height: 30px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-  }
-  .about .aboutContent .aboutSocial a {
-    margin: 0 15px;
-  }
-  .about .aboutContent .aboutSocial img {
-    width: 35px;
-    margin-bottom: 50px;
-  }
-  /* ============================== OFFRES ============================== */
-  .offres .offresTitre h2 {
-    font-size: 2rem;
-    margin-top: 80px;
-  }
-  .offres .offresTitre .separation {
-    width: 160px;
-  }
-  .offres .offresContent .card {
-    margin: 20px 0;
-  }
-  .offres .offresContent .card-image {
-    padding: 30px;
-  }
-  .offres .offresContent .card-content p {
-    font-size: 1.5rem;
-  }
-  .offres .offresContent .card-action p {
-    font-size: 1.5rem;
-  }
-  /* ============================== CONTACT ============================== */
-  .contact .contactContent {
-    padding-bottom: 50px;
-  }
-  .contact .contactContent .contactTitre h2 {
-    font-size: 2rem;
-    margin-top: 80px;
-  }
-  .contact .contactContent .contactTitre .separation {
-    width: 240px;
-  }
-  .contact .contactContent .contactTexte p {
-    font-size: 1rem;
-    line-height: 25px;
-    margin-bottom: 50px;
-  }
-  .contact .contactContent .input-field {
-    margin: 25px 0;
-  }
-  .contact .contactContent .input-field input,
-.contact .contactContent .input-field textarea {
-    font-size: 1rem;
-  }
-  .contact .contactContent .input-field label {
-    font-size: 1rem;
-  }
-  .contact .contactContent .input-field i {
-    font-size: 2.2rem;
-  }
-  .contact .contactContent .btnForm {
-    font-size: 1rem;
-  }
-  /* ============================== FOOTER ============================== */
-  footer {
-    height: 80px;
-  }
-  footer .footer-copyright p {
-    font-size: 1rem;
-  }
-}/*# sourceMappingURL=style.css.map */
+/* ============================================= 426px ============================================= *//*# sourceMappingURL=style.css.map */
