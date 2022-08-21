@@ -254,7 +254,7 @@ header {
     }
 
     .card-title {
-      color: $colorTexte;
+      color: $colorSecond;
       font-size: 1rem;
     }
 
@@ -263,7 +263,7 @@ header {
       padding-bottom: 15px;
 
       p {
-        color: $colorTexte;
+        color: $colorSecond;
         font-size: 0.8rem;
         padding: 0 10px;
       }
@@ -273,8 +273,8 @@ header {
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
 
-      p {
-        font-size: 1rem;
+      a {
+        font-size: 0.8rem;
       }
     }
     .card
@@ -293,7 +293,7 @@ header {
   text-align: center;
 
   .contactCircle {
-    height: 70%;
+    height: 90%;
     width: 100%;
     position: absolute;
     top: 0px;
@@ -364,6 +364,7 @@ header {
       border-radius: 15px;
       font-size: 0.8rem;
       margin-top: 25px;
+      margin-bottom: 50px;
     }
   }
 }
@@ -389,4 +390,349 @@ footer {
 /* ============================================= 426px ============================================= */
 
 @media screen and (min-width: 426px) {
+  /* ============================== NAVBAR ============================== */
+
+  .nav {
+    #hamBurger {
+      width: 40px;
+      height: 40px;
+      border-radius: 25px;
+
+      &::before {
+        width: 25px;
+      }
+
+      span {
+        width: 25px;
+      }
+
+      &::after {
+        width: 25px;
+      }
+    }
+
+    #navBar {
+      height: 60vh;
+      width: 100px;
+
+      .navLinks {
+        gap: 50px;
+
+        a {
+          font-size: 0.8rem;
+
+          i {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* ============================== HEADER ============================== */
+
+  .headerContent {
+    .headerTitre h1 {
+      font-size: 4.5rem;
+    }
+
+    .headerLinks {
+      a {
+        font-size: 0.8rem;
+      }
+
+      i {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  /* ============================== ABOUT ============================== */
+
+  .about {
+    .aboutContent {
+      h2 {
+        font-size: 2rem;
+        margin-top: 80px;
+      }
+
+      .separation {
+        width: 130px;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 25px;
+        margin-bottom: 50px;
+      }
+
+      .aboutSocial {
+        margin-bottom: 50px;
+        a {
+          margin: 0 15px;
+        }
+        img {
+          width: 35px;
+        }
+      }
+    }
+  }
+
+  /* ============================== OFFRES ============================== */
+
+  .offres {
+    .offresTitre {
+      h2 {
+        font-size: 2rem;
+        margin-top: 80px;
+      }
+
+      .separation {
+        width: 160px;
+      }
+    }
+
+    .offresContent {
+      .card {
+        margin: 50px 0;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+      }
+
+      .card-content {
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      .card-action {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  /* ============================== CONTACT ============================== */
+
+  .contact {
+    .contactContent {
+      padding-bottom: 50px;
+
+      .contactTitre {
+        h2 {
+          font-size: 2rem;
+          margin-top: 80px;
+        }
+
+        .separation {
+          width: 240px;
+        }
+      }
+
+      .contactTexte p {
+        font-size: 1rem;
+        line-height: 25px;
+        margin-bottom: 50px;
+      }
+
+      .input-field {
+        input,
+        textarea {
+          font-size: 1rem;
+        }
+
+        label {
+          font-size: 1rem;
+        }
+
+        i {
+          font-size: 2.5rem;
+        }
+      }
+
+      .btnForm {
+        font-size: 1rem;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  /* ============================== FOOTER ============================== */
+
+  footer {
+    height: 80px;
+
+    .footer-copyright {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/* ============================================= 1440px ============================================= */
+
+@media screen and (min-width: 1440px) {
+  /* ============================== NAVBAR ============================== */
+
+  .nav {
+    #navBar {
+      height: 70vh;
+      width: 120px;
+
+      .navLinks {
+        gap: 70px;
+
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  /* ============================== HEADER ============================== */
+
+  .headerContent {
+    .headerTitre h1 {
+      font-size: 6rem;
+    }
+
+    .headerLinks {
+      a {
+        font-size: 1rem;
+      }
+
+      i {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  /* ============================== ABOUT ============================== */
+
+  .about {
+    .aboutContent {
+      h2 {
+        font-size: 3rem;
+        margin-top: 120px;
+      }
+
+      .separation {
+        width: 210px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 30px;
+        margin-bottom: 80px;
+      }
+
+      .aboutSocial {
+        margin-bottom: 80px;
+        a {
+          margin: 0 20px;
+        }
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  /* ============================== OFFRES ============================== */
+
+  .offres {
+    .offresTitre {
+      h2 {
+        font-size: 3rem;
+        margin-top: 120px;
+      }
+
+      .separation {
+        width: 250px;
+      }
+    }
+
+    .offresContent {
+      .card {
+        margin: 80px 40px;
+      }
+
+      .card-title {
+        font-size: 1rem;
+      }
+
+      .card-content {
+        p {
+          font-size: 1.1rem;
+        }
+      }
+
+      .card-action {
+        a {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  /* ============================== CONTACT ============================== */
+
+  .contact {
+    .contactContent {
+      padding-bottom: 80px;
+
+      .contactTitre {
+        h2 {
+          font-size: 3rem;
+          margin-top: 120px;
+        }
+
+        .separation {
+          width: 380px;
+        }
+      }
+
+      .contactTexte p {
+        font-size: 1.1rem;
+        line-height: 30px;
+        margin-bottom: 80px;
+      }
+
+      .input-field {
+        margin: 30px 0;
+
+        input,
+        textarea {
+          font-size: 1.1rem;
+        }
+
+        label {
+          font-size: 1.1rem;
+        }
+
+        i {
+          font-size: 3rem;
+        }
+      }
+
+      .btnForm {
+        font-size: 1.1rem;
+        margin-top: 50px;
+      }
+    }
+  }
+
+  /* ============================== FOOTER ============================== */
+
+  footer {
+    .footer-copyright {
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
 }
