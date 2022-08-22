@@ -1,2 +1,2 @@
-# SpotPhoto
- Site de géolocalisation de lieux pour faire des shootings photos 
+# Clin d'Oeil
+ E-commerce de photographe ( en test ) ! 
